@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #000;
+    --text: #fff;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hero-bg {
+  background-image: url('/bg.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

@@ -25,3 +25,8 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+body {
+  background: black;
+  color: white;
+}

@@ -13,7 +13,8 @@ export default function SecuritySection() {
         className="text-center font-serif italic leading-[1.1]"
       >
         <span className="block text-[60px] md:text-[90px] text-[#C8FFD4]">
-          on PALS pay,
+          on PALS pay, 
+          <br/>
           security is first.
         </span>
         <span className="block text-[50px] md:text-[80px] text-[#A3C3A3]/80 mt-4">

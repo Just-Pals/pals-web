@@ -6,6 +6,7 @@ import PayInstantly from "@/component/Pay/PayInstantly";
 import PartnersSection from "@/component/Pay/PartnersSection";
 import SecuritySection from "@/component/Pay/SecuritySection";
 import SafetyNetSection from "@/component/Pay/SafetyNetSection";
+import FlairsSection from "@/component/Pay/FlairsSection";
 import Footer from "@/component/Pay/Footer";
 
 export default function PayPage() {
@@ -19,6 +20,7 @@ export default function PayPage() {
       <PartnersSection/>
       <SecuritySection/>
       <SafetyNetSection/>
+      <FlairsSection />
       <Footer/>
     </main>
   );

@@ -12,7 +12,8 @@ export default function DownloadCard() {
       <Image src="/qr.png" alt="qr" width={80} height={80} />
 
       <p className="font-medium text-[16px] leading-snug">
-        Scan to download <br/> the PALS app
+        {/* Scan to download <br/> the PALS app */}
+        Scan to register for <br/> PALS (Beta)
       </p>
 
       <button

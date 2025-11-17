@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "PALS",
+  title: "Pals - Over Banks",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

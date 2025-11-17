@@ -6,15 +6,16 @@ import { useEffect, useRef, useState } from "react";
 const HOT_ZONE = 60;
 
 const LINES = [
-  "the story of pals",
-  "begins with trust. we",
-  "believe individuals",
-  "who've proven their",
-  "trustworthiness deserve better:",
-  "better experiences, better rewards,",
-  "better rules. this is the status quo",
-  "we're building. make it to the club, and",
-  "experience the ascension yourself.",
+  
+"pals is for the people",
+"who hold their tribe together",
+"who step up before anyone asks",
+"who treat trust like it actually matters",
+"they deserve a syste",
+"that sends that energy right bac",
+"with real access, real safety",
+"and real ways to grow",
+"we win because our circle does",
 ];
 
 export default function StorySection() {

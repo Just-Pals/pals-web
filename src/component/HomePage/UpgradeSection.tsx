@@ -5,36 +5,36 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 const features = [
-  {
-    tag: "SCAN & PAY",
+  { 
+    tag: "Purchase",
     title: "scan & pay any UPI QR",
     img: "/features/scan-pay.png",
   },
   {
-    tag: "UPI ON CREDIT",
+    tag: "Loan",
     title: "UPI payments on credit.",
     img: "/features/upi-credit.png",
   },
   {
-    tag: "TAP TO PAY",
+    tag: "Charity",
     title: "tap your phone. pay on credit.",
     img: "/features/tap-to-pay.png",
   },
   {
-    tag: "PAY ANYONE",
+    tag: "Invest",
     title: "send money to any UPI app",
     img: "/features/pay-anyone.png",
   },
-  {
-    tag: "CAR GARAGE",
-    title: "manage your car’s vitals",
-    img: "/features/car-garage.png",
-  },
-  {
-    tag: "TRAVEL MEMBERSHIP",
-    title: "travel, curated for members",
-    img: "/features/travel-membership.png",
-  },
+  // {
+  //   tag: "CAR GARAGE",
+  //   title: "manage your car’s vitals",
+  //   img: "/features/car-garage.png",
+  // },
+  // {
+  //   tag: "TRAVEL MEMBERSHIP",
+  //   title: "travel, curated for members",
+  //   img: "/features/travel-membership.png",
+  // },
 ];
 
 export default function UpgradeSection() {

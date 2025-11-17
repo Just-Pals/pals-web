@@ -88,7 +88,8 @@ export default function Navbar() {
           whileTap={{ scale: 0.98 }}
         >
           <span className="tracking-widest text-xs text-white/70">
-            CRED INDUSIND BANK <br /> RUPAY CREDIT CARD
+            {/* CRED INDUSIND BANK <br /> RUPAY CREDIT CARD */}
+            PALS MONEY
           </span>
 
           {/* Hamburger Icon with Animation */}

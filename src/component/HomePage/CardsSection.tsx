@@ -8,8 +8,7 @@ export default function CardsSection() {
         {/* LEFT TEXT */}
         <div className="">
           <h2 className="text-[48px] md:text-[64px] font-semibold leading-[1.05] tracking-tight">
-            do more with
-            <br />your credit cards
+              because your circle {'>'} any bank
           </h2>
 
           <p className="mt-6 text-white/60 text-[16px] leading-relaxed max-w-md">

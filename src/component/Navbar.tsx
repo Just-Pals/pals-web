@@ -68,7 +68,7 @@ export default function Navbar() {
             whileHover={{ rotate: 360 }}
             className="transition-transform duration-500"
           >
-            <Image src="/logo.png" width={45} height={45} alt="logo" priority />
+            <Image src="/Transparent.png" width={45} height={45} alt="logo" priority />
           </motion.div>
           <motion.span
             className="text-2xl font-semibold text-white"
@@ -161,7 +161,7 @@ export default function Navbar() {
                     damping: 15,
                   }}
                 >
-                  <Image src="/logo.png" width={40} height={40} alt="logo" />
+                  <Image src="/Transparent.png" width={40} height={40} alt="logo" />
                 </motion.div>
                 <motion.span
                   className="text-2xl font-semibold"

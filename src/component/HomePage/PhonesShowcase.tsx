@@ -19,9 +19,10 @@ export default function PhonesShowcase() {
         {/* Headline + Copy */}
         <div className="mt-10 text-center">
           <h2 className="text-[56px] md:text-[92px] leading-[0.95] font-semibold tracking-[-0.5px]">
-            all that you deserve.
+          
+            our pals deserve better.
             <br />
-            and some more.
+and so much more.
           </h2>
 
           <p className="mt-6 text-white/70 text-[16px] md:text-[18px] max-w-2xl mx-auto leading-relaxed">

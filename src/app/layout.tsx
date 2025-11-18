@@ -5,6 +5,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Pals - Over Banks",
+  icons: {
+    icon: "/Transparent.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

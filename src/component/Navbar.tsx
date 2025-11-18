@@ -46,7 +46,7 @@ export default function Navbar() {
     <>
       {/* TOP NAV */}
      
-        <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-10 py-6 z-50 mt-8">
+        <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-4 sm:px-6 md:px-10 py-4 md:py-6 z-50 mt-4 sm:mt-6 md:mt-8">
         {/* LOGO - Left Side */}
         <motion.div
           className="flex items-center gap-3 cursor-pointer"
@@ -68,10 +68,10 @@ export default function Navbar() {
             whileHover={{ rotate: 360 }}
             className="transition-transform duration-500"
           >
-            <Image src="/Transparent.png" width={45} height={45} alt="logo" priority />
+            <Image src="/Transparent.png" width={45} height={45} alt="logo" priority className="w-8 h-8 sm:w-10 sm:h-10 md:w-[45px] md:h-[45px]" />
           </motion.div>
           <motion.span
-            className="text-2xl font-semibold text-white"
+            className="text-lg sm:text-xl md:text-2xl font-semibold text-white"
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
@@ -83,11 +83,11 @@ export default function Navbar() {
         {/* BUTTON */}
         <motion.button
           onClick={() => setMenuOpen(true)}
-          className="border border-white/40 rounded-xl px-6 py-3 flex items-center gap-6 bg-black/20 backdrop-blur-md hover:bg-white/10 transition-all"
+          className="border border-white/40 rounded-xl px-3 sm:px-4 md:px-6 py-2 md:py-3 flex items-center gap-2 sm:gap-4 md:gap-6 bg-black/20 backdrop-blur-md hover:bg-white/10 transition-all"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >
-          <span className="tracking-widest text-xs text-white/70">
+          <span className="tracking-widest text-[10px] sm:text-xs text-white/70 hidden sm:inline">
             {/* CRED INDUSIND BANK <br /> RUPAY CREDIT CARD */}
             PALS MONEY
           </span>
@@ -135,7 +135,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black z-[999] p-20 overflow-y-auto"
+            className="fixed inset-0 bg-black z-[999] p-4 sm:p-8 md:p-12 lg:p-20 overflow-y-auto"
           >
             {/* TOP ROW INSIDE MENU */}
             <motion.div
@@ -199,10 +199,10 @@ export default function Navbar() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="grid grid-cols-3 gap-20"
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-20"
             >
               {/* LEFT SIDE MENU LIST */}
-              <div className="space-y-6 text-gray-400 text-xl border-r border-white/20 pr-16">
+              <div className="space-y-4 md:space-y-6 text-gray-400 text-base sm:text-lg md:text-xl border-r-0 md:border-r border-white/20 pr-0 md:pr-8 lg:pr-16 pb-6 md:pb-0 border-b md:border-b-0 border-white/20 md:border-b-0">
                 {menuItems.map((item, index) => (
                   <motion.div
                     key={item}
@@ -224,7 +224,7 @@ export default function Navbar() {
               </div>
 
               {/* RIGHT SIDE CONTENT — Dynamic */}
-              <div className="col-span-2 space-y-10">
+              <div className="col-span-1 md:col-span-2 space-y-6 md:space-y-10">
                 {/* OPTIONS GRID */}
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -233,7 +233,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.3 }}
-                    className="grid grid-cols-3 gap-10"
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10"
                   >
                     {menuData[activeMenu].map((item, i) => (
                       <motion.div

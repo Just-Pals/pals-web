@@ -21,12 +21,12 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full border-y border-white/10 bg-black py-20 px-6">
+    <section className="w-full border-y border-white/10 bg-black py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       
       {/* Section Header Toggle */}
       <button
         onClick={() => setSectionOpen(!sectionOpen)}
-     className="block mx-auto text-center text-white/80 text-[18px] uppercase tracking-[0.18em] hover:text-white transition"
+     className="block mx-auto text-center text-white/80 text-[14px] sm:text-[16px] md:text-[18px] uppercase tracking-[0.18em] hover:text-white transition"
        
        >
         F A Q s   {sectionOpen ? "▲" : "▼"}
@@ -39,7 +39,7 @@ export default function FaqSection() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-5xl mx-auto space-y-12"
+            className="max-w-5xl mx-auto space-y-8 sm:space-y-10 md:space-y-12 mt-6 sm:mt-8"
           >
             {faqData.map((item, i) => (
               <FaqItem
@@ -67,7 +67,7 @@ function FaqItem({ index, q, a, openIndex, setOpenIndex }: any) {
 
       <button
         onClick={() => setOpenIndex(openIndex === index ? null : index)}
-        className="w-full text-left text-[20px] md:text-[24px] font-medium text-white"
+        className="w-full text-left text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-medium text-white"
       >
         {q}
       </button>
@@ -79,7 +79,7 @@ function FaqItem({ index, q, a, openIndex, setOpenIndex }: any) {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35 }}
-            className="text-white/60 mt-3 leading-relaxed text-[15px] md:text-[17px] pr-4"
+            className="text-white/60 mt-2 sm:mt-3 leading-relaxed text-[14px] sm:text-[15px] md:text-[17px] pr-2 sm:pr-4"
           >
             {a}
           </motion.p>

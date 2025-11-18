@@ -17,9 +17,9 @@ export default function PolicySection() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="w-full border-y border-white/10 bg-black py-20 px-6">
+    <section className="w-full border-y border-white/10 bg-black py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       <button
-        className="block mx-auto text-center text-white/80 text-[18px] uppercase tracking-[0.18em] hover:text-white transition"
+        className="block mx-auto text-center text-white/80 text-[14px] sm:text-[16px] md:text-[18px] uppercase tracking-[0.18em] hover:text-white transition"
         onClick={() => setOpen(!open)}
       >
         Legal & Policy {open ? "▲" : "▼"}
@@ -32,7 +32,7 @@ export default function PolicySection() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-5xl mx-auto mt-8 text-white/50 text-[14px] leading-relaxed whitespace-pre-line"
+            className="max-w-5xl mx-auto mt-6 sm:mt-8 text-white/50 text-[12px] sm:text-[13px] md:text-[14px] leading-relaxed whitespace-pre-line px-2"
           >
             {policyText}
           </motion.div>

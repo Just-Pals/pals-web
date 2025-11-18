@@ -53,8 +53,8 @@ export default function UpgradeSection() {
   }, []);
 
   return (
-    <section className="bg-black py-28 px-6 select-none overflow-hidden">
-      <h2 className="text-[52px] md:text-[72px] font-semibold mb-12 leading-[1.05]">
+    <section className="bg-black py-16 sm:py-20 md:py-28 px-4 sm:px-6 select-none overflow-hidden">
+      <h2 className="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[72px] font-semibold mb-8 sm:mb-10 md:mb-12 leading-[1.05]">
         upgrade your life.
         <br />bit by bit.
       </h2>
@@ -62,7 +62,7 @@ export default function UpgradeSection() {
       <div className="overflow-hidden">
         <motion.div
           ref={containerRef}
-          className="flex gap-8 cursor-grab active:cursor-grabbing"
+          className="flex gap-4 sm:gap-6 md:gap-8 cursor-grab active:cursor-grabbing"
           drag="x"
           dragConstraints={constraints}
           style={{ x }}
@@ -70,22 +70,22 @@ export default function UpgradeSection() {
           {features.map((f, i) => (
             <div
               key={i}
-              className="border border-white/15 w-[350px] shrink-0 rounded-xl overflow-hidden group hover:border-white/40 transition"
+              className="border border-white/15 w-[280px] sm:w-[320px] md:w-[350px] shrink-0 rounded-xl overflow-hidden group hover:border-white/40 transition"
             >
-              <div className="p-6">
-                <p className="text-white/60 text-xs tracking-[0.22em] uppercase">
+              <div className="p-4 sm:p-5 md:p-6">
+                <p className="text-white/60 text-[10px] sm:text-xs tracking-[0.22em] uppercase">
                   {f.tag}
                 </p>
-                <h3 className="mt-3 text-[22px] font-medium leading-tight">
+                <h3 className="mt-2 sm:mt-3 text-[18px] sm:text-[20px] md:text-[22px] font-medium leading-tight">
                   {f.title}
                 </h3>
 
-                <button className="mt-4 text-xs border border-white/30 px-3 py-1.5 rounded-full hover:bg-white/10 transition">
+                <button className="mt-3 sm:mt-4 text-[10px] sm:text-xs border border-white/30 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full hover:bg-white/10 transition">
                   know more →
                 </button>
               </div>
 
-              <div className="w-full h-[380px] overflow-hidden">
+              <div className="w-full h-[280px] sm:h-[320px] md:h-[380px] overflow-hidden">
                 <Image
                   src={f.img}
                   alt={f.title}

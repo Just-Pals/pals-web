@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen bg-black flex flex-col justify-center items-center text-center overflow-hidden">
+    <section className="relative w-full min-h-screen bg-black flex flex-col justify-center items-center text-center overflow-hidden py-20 sm:py-0">
       {/* Logo at top */}
       <motion.div
-        className="absolute top-12 left-1/2 -translate-x-1/2"
+        className="absolute top-6 sm:top-8 md:top-12 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 border-2 border-white rounded-md flex items-center justify-center">
-            <span className="text-white font-bold text-base">C</span>
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 border-2 border-white rounded-md flex items-center justify-center">
+            <span className="text-white font-bold text-sm sm:text-base">C</span>
           </div>
-          <span className="text-white font-semibold text-lg">CRED pay</span>
+          <span className="text-white font-semibold text-sm sm:text-base md:text-lg">CRED pay</span>
         </div>
       </motion.div>
 
@@ -60,20 +60,20 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="flex items-center justify-center">
-          <h1 className="text-[70px] md:text-[120px] lg:text-[180px] font-black leading-none tracking-tighter" style={{
+        <div className="flex items-center justify-center flex-wrap">
+          <h1 className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[120px] xl:text-[180px] font-black leading-none tracking-tighter" style={{
             color: "#CFFF00"
           }}>
             CRED{" "}
           </h1>
-          <h1 className="text-[70px] md:text-[120px] lg:text-[180px] font-serif italic leading-none" style={{
+          <h1 className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[120px] xl:text-[180px] font-serif italic leading-none" style={{
             color: "#CFFF00",
             fontFamily: "Georgia, serif"
           }}>
             pay
           </h1>
         </div>
-        <h2 className="text-[60px] md:text-[100px] lg:text-[150px] font-serif italic leading-none -mt-2 md:-mt-6" style={{
+        <h2 className="text-[36px] sm:text-[45px] md:text-[60px] lg:text-[100px] xl:text-[150px] font-serif italic leading-none -mt-1 sm:-mt-2 md:-mt-4 lg:-mt-6" style={{
           color: "#CFFF00",
           fontFamily: "Georgia, serif"
         }}>

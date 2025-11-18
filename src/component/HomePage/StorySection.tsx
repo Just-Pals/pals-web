@@ -61,13 +61,13 @@ export default function StorySection() {
   }, []);
 
   return (
-    <section className="w-full bg-black flex items-center justify-center px-6 py-28 pb-0">
+    <section className="w-full bg-black flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 md:py-28 pb-0">
       <div ref={containerRef} className="w-full max-w-4xl mx-auto">
-        <h3 className="text-white/50 text-[12px] tracking-[0.35em] uppercase mb-10">
+        <h3 className="text-white/50 text-[10px] sm:text-[11px] md:text-[12px] tracking-[0.35em] uppercase mb-6 sm:mb-8 md:mb-10">
           Not everyone makes it in.
         </h3>
 
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           {LINES.map((text, i) => {
             const w = weights[i] ?? 0;
             const opacity = 0.28 + w * 0.72; // 0.28 → 1
@@ -76,7 +76,7 @@ export default function StorySection() {
               <span
                 key={i}
                 data-line
-                className="block text-[28px] md:text-[36px] leading-[1.35] will-change-[opacity,transform] transition-[opacity,transform] duration-150"
+                className="block text-[20px] sm:text-[24px] md:text-[28px] lg:text-[36px] leading-[1.35] will-change-[opacity,transform] transition-[opacity,transform] duration-150"
                 style={{
                   opacity,
                   transform: `translateY(${translate}px)`,
@@ -90,7 +90,7 @@ export default function StorySection() {
         </div>
 
         {/* Horizontal divider */}
-        <div className="mt-16 h-px w-full bg-white/10" />
+        <div className="mt-10 sm:mt-12 md:mt-16 h-px w-full bg-white/10" />
       </div>
     </section>
   );

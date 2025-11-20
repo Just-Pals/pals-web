@@ -4,13 +4,17 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const policyText = `
-The Venmo Mastercard® is issued by The Bancorp Bank, N.A., pursuant to license by Mastercard International Incorporated. Card may be used everywhere Mastercard is accepted. Mastercard and the circles design are registered trademarks of Mastercard International Incorporated. The Bancorp Bank, N.A. is issuer of the Card only and not responsible for the associated accounts or other products, services, or offers from Venmo.
+Pals Legal & Compliance Disclaimer
 
-Venmo cash back terms apply. Offers are available for a limited time.
+Pals is a community-based financial platform that works with licensed banking, payment, and compliance partners wherever required. These partners are responsible only for the services they directly provide and are not responsible for Pals circles, pooled funds, profit-sharing models, or any other Pals features.
 
-Cryptocurrency activity is subject to risks and may result in losses. Consult your financial advisor.
+All trademarks, logos, and brand names referenced on this platform belong to their respective owners.
 
-All trademarks belong to their respective owners.
+Any offers, promotions, rewards, or benefits provided through Pals are subject to separate terms and may be available for a limited time.
+
+Pals does not offer interest-based products or speculative financial instruments. Any activity involving digital assets, tokenized assets, or alternative financial models may carry risks. Users should review all terms carefully and consult a qualified financial advisor if needed.
+
+Use of the Pals platform is subject to eligibility checks, verification, and compliance with applicable regional regulations.
 `;
 
 export default function PolicySection() {

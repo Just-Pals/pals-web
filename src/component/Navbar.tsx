@@ -89,7 +89,7 @@ export default function Navbar() {
         >
           <span className="tracking-widest text-[10px] sm:text-xs text-white/70 hidden sm:inline">
             {/* CRED INDUSIND BANK <br /> RUPAY CREDIT CARD */}
-            PALS MONEY
+            Faith-Powered
           </span>
 
           {/* Hamburger Icon with Animation */}

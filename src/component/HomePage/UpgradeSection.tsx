@@ -7,22 +7,22 @@ import { useRef, useEffect, useState } from "react";
 const features = [
   { 
     tag: "Purchase",
-    title: "scan & pay any UPI QR",
+    title: "scan and pay instantly.",
     img: "/features/scan-pay.png",
   },
   {
     tag: "Loan",
-    title: "UPI payments on credit.",
+    title: "borrow from pals and pools.",
     img: "/features/upi-credit.png",
   },
   {
     tag: "Charity",
-    title: "tap your phone. pay on credit.",
+    title: "donate to the causes you care about.",
     img: "/features/tap-to-pay.png",
   },
   {
     tag: "Invest",
-    title: "send money to any UPI app",
+    title: "invest in curated projects and startups.",
     img: "/features/pay-anyone.png",
   },
   // {

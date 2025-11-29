@@ -108,12 +108,11 @@ export default function Hero() {
         transition={{ duration: 1.2, delay: 0.4 }}
       >
         <svg 
-          className="w-full" 
+          className="w-full h-[200px] sm:h-[300px] md:h-[400px]" 
           viewBox="0 0 1440 400" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
-          style={{ height: "400px" }}
         >
           <defs>
             <linearGradient id="rainbowGradient" x1="0%" y1="0%" x2="100%" y2="0%">

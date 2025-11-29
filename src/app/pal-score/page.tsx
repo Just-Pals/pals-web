@@ -10,7 +10,7 @@ import Navbar from "@/component/Navbar";
 
 export default function PalScorePage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 overflow-x-hidden">
        <Navbar />
       <Hero />
       <Factors/>

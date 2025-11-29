@@ -92,30 +92,50 @@ export default function FlairsSection() {
 
         {/* FLOATING FLAIRS around phone */}
         {[
-          { src: "/flair1.png", x: -280, y: -80, delay: 0.2, mobileX: -120, mobileY: -40 },
-          { src: "/flair2.png", x: 280, y: -80, delay: 0.4, mobileX: 120, mobileY: -40 },
-          { src: "/flair3.png", x: -300, y: 200, delay: 0.6, mobileX: -130, mobileY: 100 },
-          { src: "/flair4.png", x: 300, y: 200, delay: 0.8, mobileX: 130, mobileY: 100 },
-          { src: "/flair5.png", x: 0, y: 380, delay: 1.0, mobileX: 0, mobileY: 200 },
+          { src: "/flair1.png", x: -280, y: -80, delay: 0.2, mobileX: -100, mobileY: -30 },
+          { src: "/flair2.png", x: 280, y: -80, delay: 0.4, mobileX: 100, mobileY: -30 },
+          { src: "/flair3.png", x: -300, y: 200, delay: 0.6, mobileX: -110, mobileY: 80 },
+          { src: "/flair4.png", x: 300, y: 200, delay: 0.8, mobileX: 110, mobileY: 80 },
+          { src: "/flair5.png", x: 0, y: 380, delay: 1.0, mobileX: 0, mobileY: 150 },
         ].map((flair, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, scale: 0.5, y: 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.6, delay: flair.delay }}
-            className="absolute hidden sm:block"
+            className="absolute"
             style={{ 
-              transform: `translate(${flair.x}px, ${flair.y}px)`,
               filter: "drop-shadow(0 10px 30px rgba(0,0,0,0.5))"
             }}
           >
-            <Image
-              src={flair.src}
-              alt={`flair ${i + 1}`}
-              width={140}
-              height={140}
-              className="object-contain w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px]"
-            />
+            <div 
+              className="sm:hidden"
+              style={{ 
+                transform: `translate(${flair.mobileX}px, ${flair.mobileY}px)`
+              }}
+            >
+              <Image
+                src={flair.src}
+                alt={`flair ${i + 1}`}
+                width={140}
+                height={140}
+                className="object-contain w-[50px] xs:w-[60px]"
+              />
+            </div>
+            <div 
+              className="hidden sm:block"
+              style={{ 
+                transform: `translate(${flair.x}px, ${flair.y}px)`
+              }}
+            >
+              <Image
+                src={flair.src}
+                alt={`flair ${i + 1}`}
+                width={140}
+                height={140}
+                className="object-contain w-[80px] md:w-[100px] lg:w-[120px] xl:w-[140px]"
+              />
+            </div>
           </motion.div>
         ))}
       </div>

@@ -134,29 +134,32 @@ export default function Hero() {
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pt-48 pb-52 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-12 pt-24 sm:pt-32 md:pt-40 lg:pt-48 pb-24 sm:pb-32 md:pb-40 lg:pb-52 text-center">
 
-        <p className="uppercase tracking-[0.3em] text-[#0c6a48] text-xs font-medium mb-8">
+        <p className="uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#0c6a48] text-[10px] xs:text-xs font-medium mb-6 sm:mb-8">
           CREDIT SCORE, DEMYSTIFIED
         </p>
 
         <h1
           className="
             font-[PlayfairDisplay] 
-            text-[52px]
-            sm:text-[72px] 
-            md:text-[88px] 
+            text-[36px]
+            xs:text-[42px]
+            sm:text-[56px]
+            md:text-[72px] 
+            lg:text-[88px] 
             font-bold 
             leading-[1.08]
             text-[#1a1a1a]
+            px-2
           "
         >
           see beyond<br />
           <span className="text-[#0a7a43]">the score.</span>
         </h1>
 
-        <p className="text-gray-600 text-lg md:text-xl mt-8 leading-relaxed font-light">
-          track, understand,<br />
+        <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl mt-6 sm:mt-8 leading-relaxed font-light px-4">
+          track, understand,<br className="hidden sm:block" />
           and shape your credit journey.
         </p>
       </div>

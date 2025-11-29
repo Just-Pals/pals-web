@@ -55,30 +55,32 @@ export default function Hero() {
 
       {/* Main text content */}
       <motion.div
-        className="relative z-10 px-4"
+        className="relative z-10 w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="flex items-center justify-center flex-wrap">
-          <h1 className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[120px] xl:text-[180px] font-black leading-none tracking-tighter" style={{
-            color: "#CFFF00"
-          }}>
-            CRED{" "}
-          </h1>
-          <h1 className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[120px] xl:text-[180px] font-serif italic leading-none" style={{
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center justify-center flex-wrap">
+            <h1 className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[120px] xl:text-[180px] font-black leading-none tracking-tighter" style={{
+              color: "#CFFF00"
+            }}>
+              CRED{" "}
+            </h1>
+            <h1 className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[120px] xl:text-[180px] font-serif italic leading-none" style={{
+              color: "#CFFF00",
+              fontFamily: "Georgia, serif"
+            }}>
+              pay
+            </h1>
+          </div>
+          <h2 className="text-[36px] sm:text-[45px] md:text-[60px] lg:text-[100px] xl:text-[150px] font-serif italic leading-none -mt-1 sm:-mt-2 md:-mt-4 lg:-mt-6 text-center" style={{
             color: "#CFFF00",
             fontFamily: "Georgia, serif"
           }}>
-            pay
-          </h1>
+            has arrived
+          </h2>
         </div>
-        <h2 className="text-[36px] sm:text-[45px] md:text-[60px] lg:text-[100px] xl:text-[150px] font-serif italic leading-none -mt-1 sm:-mt-2 md:-mt-4 lg:-mt-6" style={{
-          color: "#CFFF00",
-          fontFamily: "Georgia, serif"
-        }}>
-          has arrived
-        </h2>
       </motion.div>
 
       {/* Horizontal line across middle */}

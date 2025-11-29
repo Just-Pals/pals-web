@@ -3,27 +3,27 @@ import { motion } from "framer-motion";
 
 export default function SecuritySection() {
   return (
-    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-12 lg:px-24 py-16 sm:py-24 md:py-40">
+    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-24 md:py-32 lg:py-40">
+      <div className="max-w-7xl mx-auto">
+        {/* ---- Heading ---- */}
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center font-serif italic leading-[1.1]"
+        >
+          <span className="block text-[32px] sm:text-[42px] md:text-[60px] lg:text-[90px] text-[#C8FFD4]">
+            on PALS pay, 
+            <br/>
+            security is first.
+          </span>
+          <span className="block text-[28px] sm:text-[36px] md:text-[50px] lg:text-[80px] text-[#A3C3A3]/80 mt-2 sm:mt-3 md:mt-4">
+            and second.
+          </span>
+        </motion.h2>
 
-      {/* ---- Heading ---- */}
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center font-serif italic leading-[1.1] px-4"
-      >
-        <span className="block text-[32px] sm:text-[42px] md:text-[60px] lg:text-[90px] text-[#C8FFD4]">
-          on PALS pay, 
-          <br/>
-          security is first.
-        </span>
-        <span className="block text-[28px] sm:text-[36px] md:text-[50px] lg:text-[80px] text-[#A3C3A3]/80 mt-2 sm:mt-3 md:mt-4">
-          and second.
-        </span>
-      </motion.h2>
-
-      {/* ---- Lower Section ---- */}
-      <div className="mt-16 sm:mt-24 md:mt-40 flex flex-col md:flex-row justify-between items-center gap-8 sm:gap-12 md:gap-20">
+        {/* ---- Lower Section ---- */}
+        <div className="mt-16 sm:mt-24 md:mt-32 lg:mt-40 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
 
         {/* Left Text */}
         <motion.div
@@ -55,6 +55,7 @@ export default function SecuritySection() {
           </button>
         </motion.div>
 
+        </div>
       </div>
     </section>
   );

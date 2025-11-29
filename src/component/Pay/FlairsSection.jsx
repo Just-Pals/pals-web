@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function FlairsSection() {
   return (
-    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden py-32">
+    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
       
       {/* PLANET BACKGROUND - positioned higher and larger */}
       <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[1800px] h-[1800px] opacity-60 pointer-events-none z-0">
@@ -24,7 +24,7 @@ export default function FlairsSection() {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-20 text-center mb-16 sm:mb-20 md:mb-32 px-4"
+        className="relative z-20 text-center mb-16 sm:mb-20 md:mb-32"
       >
         <p className="text-white/40 tracking-[0.3em] text-[10px] sm:text-xs md:text-sm uppercase mb-3 sm:mb-4">
           BEHOLD
@@ -35,7 +35,7 @@ export default function FlairsSection() {
       </motion.div>
 
       {/* PHONE WITH FLAIRS */}
-      <div className="relative z-20 flex justify-center items-center mb-20 sm:mb-28 md:mb-40 px-4">
+      <div className="relative z-20 flex justify-center items-center mb-20 sm:mb-28 md:mb-40">
         
         {/* Orange glow circle behind phone */}
         <motion.div
@@ -125,7 +125,7 @@ export default function FlairsSection() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-20 flex justify-center px-4 sm:px-6 mb-16 sm:mb-24 md:mb-32"
+        className="relative z-20 flex justify-center mb-16 sm:mb-24 md:mb-32"
       >
         <div className="relative max-w-4xl w-full">
           <Image
@@ -139,8 +139,8 @@ export default function FlairsSection() {
       </motion.div>
 
       {/* BOTTOM TEXT SECTION */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
-        <div className="flex flex-col md:flex-row items-start justify-between gap-8 sm:gap-12 md:gap-20">
+      <div className="relative z-20 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12">
           
           {/* Left - Heading */}
           <motion.h2

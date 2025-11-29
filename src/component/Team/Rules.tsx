@@ -38,13 +38,13 @@ export default function Rules() {
   };
 
   return (
-    <section className="w-full bg-black text-white py-20 px-6 md:px-20">
+    <section className="w-full bg-black text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-20">
       {/* HEADER */}
-      <div className="text-center mb-16">
-        <p className="text-xs tracking-[0.3em] text-gray-300 uppercase">
+      <div className="text-center mb-10 sm:mb-12 md:mb-16">
+        <p className="text-[10px] xs:text-xs tracking-[0.2em] sm:tracking-[0.3em] text-gray-300 uppercase">
           Frequently Asked Questions
         </p>
-        <h2 className="text-[#c6ff00] italic text-5xl sm:text-6xl font-bold mt-3">
+        <h2 className="text-[#c6ff00] italic text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold mt-2 sm:mt-3">
           the rules
         </h2>
       </div>
@@ -58,19 +58,19 @@ export default function Rules() {
               {/* HEADER ROW */}
               <button
                 onClick={() => toggle(i)}
-                className="w-full flex justify-between items-center py-8"
+                className="w-full flex justify-between items-center py-4 sm:py-6 md:py-8 px-2 sm:px-4"
               >
-                <span className="italic text-4xl sm:text-5xl font-semibold">
+                <span className="italic text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-left">
                   {item.title}
                 </span>
 
-                <div className="flex items-center gap-3 text-gray-400">
-                  <span className="text-lg font-light">
+                <div className="flex items-center gap-2 sm:gap-3 text-gray-400 shrink-0">
+                  <span className="text-sm sm:text-base md:text-lg font-light">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <motion.span
                     animate={{ rotate: opened ? 180 : 0 }}
-                    className="text-2xl"
+                    className="text-lg sm:text-xl md:text-2xl"
                   >
                     ▼
                   </motion.span>
@@ -88,7 +88,7 @@ export default function Rules() {
                     className="overflow-hidden"
                   >
                     <div
-                      className="px-6 md:px-12 py-10 text-black text-lg leading-relaxed"
+                      className="px-4 sm:px-6 md:px-12 py-6 sm:py-8 md:py-10 text-black text-sm sm:text-base md:text-lg leading-relaxed"
                       style={{ background: item.color }}
                     >
                       {item.content}

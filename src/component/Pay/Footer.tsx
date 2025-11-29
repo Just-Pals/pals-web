@@ -33,9 +33,10 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-24">
-        {/* Top Section - Main Message */}
-        <div className="max-w-6xl">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 md:py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto">
+          {/* Top Section - Main Message */}
+          <div className="max-w-6xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif italic leading-tight">
             <span className="text-white">experience payments for the top 1%.</span>
             <br />
@@ -46,7 +47,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section - Links and Logo */}
-        <div className="mt-16 sm:mt-24 md:mt-32 lg:mt-40 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 sm:gap-8">
+        <div className="mt-16 sm:mt-24 md:mt-32 lg:mt-40 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-12">
           {/* Left Side - Links and Copyright */}
           <div className="flex flex-col gap-4 sm:gap-6">
             {/* Links */}
@@ -97,6 +98,7 @@ export default function Footer() {
               <span className="text-white font-bold text-sm sm:text-base md:text-lg tracking-wider">PALS</span>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </footer>

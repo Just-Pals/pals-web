@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function SafetyNetSection() {
   return (
-    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-12 lg:px-24 pt-16 sm:pt-24 md:pt-40 pb-16 sm:pb-24 md:pb-32">
-
-      {/* TOP SECTION */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 sm:gap-12">
+    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-24 md:py-32 lg:py-40">
+      <div className="max-w-7xl mx-auto">
+        {/* TOP SECTION */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
 
         {/* Left Animation Icon */}
         <motion.div
@@ -60,7 +60,7 @@ export default function SafetyNetSection() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center text-[32px] sm:text-[42px] md:text-[60px] lg:text-[95px] font-serif italic text-[#C8FFD4] leading-none px-4"
+        className="text-center text-[32px] sm:text-[42px] md:text-[60px] lg:text-[95px] font-serif italic text-[#C8FFD4] leading-none"
       >
         meet your skin
       </motion.h2>
@@ -69,12 +69,13 @@ export default function SafetyNetSection() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-2xl text-center mx-auto text-white/70 text-[14px] sm:text-[16px] md:text-lg mt-6 sm:mt-8 md:mt-10 leading-relaxed px-4"
+        className="max-w-2xl text-center mx-auto text-white/70 text-[14px] sm:text-[16px] md:text-lg mt-6 sm:mt-8 md:mt-10 leading-relaxed"
       >
         PALS pay is built to showcase you. your tastes. your wins. your
         collections. explore the skins your scanner can wear. it might just be
         what you need to find yourself.
-      </motion.p>
+        </motion.p>
+      </div>
     </section>
   );
 }

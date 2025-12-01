@@ -1,17 +1,17 @@
-import Hero from "@/component/HomePage/Hero";
-import Navbar from "@/component/Navbar";
-import FaqSection from "@/component/HomePage/FaqSection";
-import StorySection from "@/component/HomePage/StorySection";
-import ProofSection from "@/component/HomePage/ProofSection";
-import CardsSection from "@/component/HomePage/CardsSection";
-import PolicySection from "@/component/HomePage/PolicySection";
-import DownloadCard from "@/component/HomePage/DownloadCard";
-import RewardsSection from "@/component/HomePage/RewardsSection";
-import UpgradeSection from "@/component/HomePage/UpgradeSection";
-import PhonesShowcase from "@/component/HomePage/PhonesShowcase";
-import SecuritySection from "@/component/HomePage/SecuritySection";
-import NotEveryoneSection from "@/component/HomePage/NotEveryoneSection";
-import Footer from "@/component/Footer";
+import Hero from "@/components/HomePage/Hero";
+import Navbar from "@/components/Navbar";
+import FaqSection from "@/components/HomePage/FaqSection";
+import StorySection from "@/components/HomePage/StorySection";
+import ProofSection from "@/components/HomePage/ProofSection";
+import CardsSection from "@/components/HomePage/CardsSection";
+import PolicySection from "@/components/HomePage/PolicySection";
+import DownloadCard from "@/components/HomePage/DownloadCard";
+import RewardsSection from "@/components/HomePage/RewardsSection";
+import UpgradeSection from "@/components/HomePage/UpgradeSection";
+import PhonesShowcase from "@/components/HomePage/PhonesShowcase";
+import SecuritySection from "@/components/HomePage/SecuritySection";
+import NotEveryoneSection from "@/components/HomePage/NotEveryoneSection";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (

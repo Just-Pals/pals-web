@@ -1,12 +1,10 @@
-// /src/app/pal-score/index.tsx
-import React from "react";
-import Hero from "../../component/PalScore/Hero";
-import Score from "@/component/PalScore/Score";
-import Footer from "@/component/Footer";
-import Privacy from "@/component/PalScore/Privacy";
-import Foresight from "@/component/PalScore/Foresight";
-import Factors from "@/component/PalScore/Factors";
-import Navbar from "@/component/Navbar";
+import Hero from "@/components/PalScore/Hero";
+import Score from "@/components/PalScore/Score";
+import Footer from "@/components/layout/Footer";
+import Privacy from "@/components/PalScore/Privacy";
+import Foresight from "@/components/PalScore/Foresight";
+import Factors from "@/components/PalScore/Factors";
+import Navbar from "@/components/Navbar";
 
 export default function PalScorePage() {
   return (

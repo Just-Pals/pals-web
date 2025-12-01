@@ -1,5 +1,5 @@
-import { blogPosts } from "@/component/BlogPage/BlogData";
-import BlogNavbar from "@/component/BlogPage/BlogNavbar";
+import { blogPosts } from "@/components/BlogPage/BlogData";
+import BlogNavbar from "@/components/BlogPage/BlogNavbar";
 import Image from "next/image";
 
 export default async function BlogDetails({ params }: { params: Promise<{ id: string }> }) {

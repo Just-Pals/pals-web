@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Pals - Over Banks",
   icons: {
-    icon: "/Transparent.png",
+    icon: "/common/logo.png",
   },
   viewport: {
     width: "device-width",

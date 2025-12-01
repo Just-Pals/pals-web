@@ -1,8 +1,8 @@
-import BlogNavbar from "@/component/BlogPage/BlogNavbar";
-import BlogList from "@/component/BlogPage/BlogList";
-import { blogPosts } from "@/component/BlogPage/BlogData";
+import BlogNavbar from "@/components/BlogPage/BlogNavbar";
+import BlogList from "@/components/BlogPage/BlogList";
+import { blogPosts } from "@/components/BlogPage/BlogData";
 import Image from "next/image";
-import Footer from "@/component/Footer";
+import Footer from "@/components/layout/Footer";
 
 export default function BlogPage() {
   const featured = blogPosts[0];

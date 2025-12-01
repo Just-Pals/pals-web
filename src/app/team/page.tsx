@@ -1,11 +1,11 @@
-import TeamNavbar from "@/component/Team/Navbar";
-import TeamHero from "@/component/Team/Hero";
-import Victors from "@/component/Team/Victors";
-import WinnersSlider from "@/component/Team/WinnersSlider";
-import Rules from "@/component/Team/Rules";
-import Exclusive from "@/component/Team/Exclusive";
-import Footer from "@/component/Pay/Footer";
-import Navbar from "@/component/Navbar";
+import TeamNavbar from "@/components/Team/Navbar";
+import TeamHero from "@/components/Team/Hero";
+import Victors from "@/components/Team/Victors";
+import WinnersSlider from "@/components/Team/WinnersSlider";
+import Rules from "@/components/Team/Rules";
+import Exclusive from "@/components/Team/Exclusive";
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/Navbar";
 
 export default function TeamPage() {
   return (
@@ -16,7 +16,7 @@ export default function TeamPage() {
       <WinnersSlider />
       <Rules />
       <Exclusive />
-            <Footer/>
+      <Footer variant="pay" showMarquee />
     </main>
   );
 }

@@ -1,17 +1,17 @@
-import Hero from "@/component/Pay/Hero";
-import Statement from "@/component/Pay/Statement";
-import QRSection from "@/component/Pay/QRSection";
-import RewardsInstant from "@/component/Pay/RewardsInstant";
-import PayInstantly from "@/component/Pay/PayInstantly";
-import PartnersSection from "@/component/Pay/PartnersSection";
-import SecuritySection from "@/component/Pay/SecuritySection";
-import SafetyNetSection from "@/component/Pay/SafetyNetSection";
-import FlairsSection from "@/component/Pay/FlairsSection";
-import Footer from "@/component/Pay/Footer";
-import Navbar from "@/component/Navbar";
-import DownloadCard from "@/component/HomePage/DownloadCard";
-import PerksSection from "@/component/Pay/PerksSection";
-import PutMoney from "@/component/Pay/PutMoney";
+import Hero from "@/components/Pay/Hero";
+import Statement from "@/components/Pay/Statement";
+import QRSection from "@/components/Pay/QRSection";
+import RewardsInstant from "@/components/Pay/RewardsInstant";
+import PayInstantly from "@/components/Pay/PayInstantly";
+import PartnersSection from "@/components/Pay/PartnersSection";
+import SecuritySection from "@/components/Pay/SecuritySection";
+import SafetyNetSection from "@/components/Pay/SafetyNetSection";
+import FlairsSection from "@/components/Pay/FlairsSection";
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/Navbar";
+import DownloadCard from "@/components/HomePage/DownloadCard";
+import PerksSection from "@/components/Pay/PerksSection";
+import PutMoney from "@/components/Pay/PutMoney";
 
 export default function PayPage() {
   return (
@@ -27,9 +27,9 @@ export default function PayPage() {
       <SecuritySection/>
       <SafetyNetSection/>
       <FlairsSection />
-      < PerksSection />
+      <PerksSection />
        <DownloadCard />
-      <Footer/>
+      <Footer variant="pay" showMarquee />
     </main>
   );
 }

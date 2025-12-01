@@ -169,7 +169,8 @@ export default function FlairsSection() {
             transition={{ duration: 0.8 }}
             className="text-[32px] sm:text-[42px] md:text-[60px] lg:text-[80px] xl:text-[90px] font-serif italic text-[#4169E1] leading-[0.9]"
           >
-            designed to<br />be shown off
+            designed for<br />
+rizz x rizzq
           </motion.h2>
 
           {/* Right - Description */}

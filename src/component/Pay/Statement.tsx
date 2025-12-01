@@ -11,14 +11,13 @@ export default function Statement() {
           transition={{ duration: 0.9 }}
           className="text-[32px] sm:text-[42px] md:text-[64px] lg:text-[80px] text-[#C5FFB0] font-serif italic leading-tight"
         >
-          make a statement
+          the future of money
           <br />
-          every time you pay
+          … is social.
         </motion.h2>
 
         <p className="mt-6 sm:mt-8 md:mt-10 text-white/70 max-w-2xl mx-auto leading-relaxed text-[14px] sm:text-[16px] md:text-[18px]">
-          scan & pay via UPI. earn assured rewards. claim collectibles. all of this
-          in a secure payment experience the creditworthy deserve.
+          pay fast. borrow easy. lend wisely. invest together. all from your pools. <br/> all with your pals. secure. simple. palworthy.
         </p>
 
         <motion.a

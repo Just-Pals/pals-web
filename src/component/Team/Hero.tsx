@@ -21,20 +21,21 @@ export default function TeamHero() {
         <div className="text-black">
           {/* TOP SMALL TEXT */}
           <p className="uppercase text-[10px] xs:text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] mb-2 sm:mb-3">
-            THE
+            So
           </p>
 
           {/* MAIN BIG ITALIC TEXT — REAL CRED FONT STYLE */}
           <h1 className="font-[PlayfairDisplay] italic font-bold text-[32px] xs:text-[42px] sm:text-[55px] md:text-[80px] lg:text-[110px] leading-[1.05] drop-shadow-lg">
-            the most<br />
-            rewarding<br />
-            payment<br />
-            system
+           
+            pals is <br />
+for pals <br />
+pals is <br />
+for palestine
           </h1>
 
           {/* BOTTOM SMALL TEXT */}
           <p className="uppercase text-[10px] xs:text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] mt-3 sm:mt-4">
-            EVER
+            ALWAYS
           </p>
         </div>
       </div>

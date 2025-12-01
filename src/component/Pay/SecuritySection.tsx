@@ -15,10 +15,10 @@ export default function SecuritySection() {
           <span className="block text-[32px] sm:text-[42px] md:text-[60px] lg:text-[90px] text-[#C8FFD4]">
             on PALS pay, 
             <br/>
-            security is first.
+           deserve better.
           </span>
           <span className="block text-[28px] sm:text-[36px] md:text-[50px] lg:text-[80px] text-[#A3C3A3]/80 mt-2 sm:mt-3 md:mt-4">
-            and second.
+            and so much more.
           </span>
         </motion.h2>
 

@@ -5,25 +5,25 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faq = [
   {
-    title: "the winning",
+    title: "not in my interest.",
     color: "#00E6FF",
     content:
       "a 100% cashback winner is selected every hour, from transactions made between 12 PM and 10 PM.",
   },
   {
-    title: "the shopping",
+    title: "join the poolitics.",
     color: "#41c935ff", // no background when closed
     content:
       "shop at select partner malls and outlets using pals pay to be eligible for the hourly draw.",
   },
   {
-    title: "the chances",
+    title: "credit where credit is due.",
     color: "#FFE100",
     content:
       "probability decides. every transaction you do with pals pay increases your odds of winning. only one win per user per day.",
   },
   {
-    title: "the celebration",
+    title: "impactful spending.",
     color: "#FF9800",
     content:
       "if you win, the 100% cashback amount is automatically credited to your pals balance and you'll be notified instantly.",

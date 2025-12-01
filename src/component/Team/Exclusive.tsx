@@ -30,24 +30,23 @@ export default function Exclusive() {
 
       {/* Heading Small */}
       <p className="text-[10px] xs:text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.25em] text-gray-300 uppercase mb-2 sm:mb-3">
-        ALL OF THE ABOVE IS
+        I AM BECAUSE WE ARE.
       </p>
 
       {/* Main Heading */}
       <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2">
-        CRED <span className="italic font-semibold">pay</span>
+         <span className="italic font-semibold">ubuntu × ukhuwwah</span>
       </h1>
 
       {/* Sub Heading */}
-      <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl italic font-bold mb-6 sm:mb-8 md:mb-10">
+      {/* <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl italic font-bold mb-6 sm:mb-8 md:mb-10">
         exclusive
-      </h2>
+      </h2> */}
 
       {/* Description */}
       <p className="text-gray-300 max-w-xl mx-auto leading-relaxed mb-8 sm:mb-10 md:mb-12 text-sm sm:text-base md:text-lg px-4">
-        crafted exclusively for the 1%, it is the newest payment
-        system by CRED that promises assured rewards after
-        every payment.
+        the prophet ﷺ said, “none of you truly believes until he loves for his brother what he loves for himself.”
+(bukhari & muslim)
       </p>
 
       {/* CTA Button */}

@@ -38,7 +38,7 @@ export default function Navbar() {
 
   Dummy: [
     { icon: "📝", label: "Blog", link: "/blog" },
-    { icon: "💰", label: "Pay", link: "/pay" },
+    { icon: "💰", label: "Club", link: "/club" },
     { icon: "⭐", label: "Pal Score", link: "/pal-score" },
     { icon: "👨‍👩‍👧‍👦", label: "Team", link: "/team" },
   ],
@@ -52,6 +52,7 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-3 xs:px-4 sm:px-6 md:px-8 lg:px-10 py-3 xs:py-4 sm:py-5 md:py-6 z-50 mt-2 xs:mt-3 sm:mt-4 md:mt-6 lg:mt-8">
         {/* LOGO - Left Side */}
         <motion.div
+        onClick={() => setMenuOpen(true)}
           className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 cursor-pointer min-w-0"
           initial={{ x: -30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}

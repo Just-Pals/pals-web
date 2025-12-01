@@ -8,20 +8,24 @@ export default function Victors() {
 
       {/* ---- Top Small Text ---- */}
       <p className="text-[10px] xs:text-[11px] sm:text-[12px] md:text-sm tracking-[0.3em] sm:tracking-[0.4em] text-gray-300 mb-4 sm:mb-6">
-        A WINNER EVERY HOUR
+        {/* A WINNER EVERY HOUR */}
+        ROOTED IN FAITH
       </p>
 
       {/* ---- Main Big Header ---- */}
       <h1
         className="font-bold italic leading-[0.9] text-[#c6ff00]
-                   text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[90px] px-2">
-        be amongst<br />the victors
+                   text-2xl xs:text-xl sm:text-5xl md:text-6xl lg:text-[70px] px-2">
+        {/* be amongst<br />the victors */}
+        reimagining islamic finance <br />
+for a modern world.
       </h1>
 
       {/* ---- Sub Text ---- */}
       <p className="mt-6 sm:mt-8 md:mt-10 text-gray-300 mb-12 sm:mb-15 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto px-4">
-        pay at CRED pay select malls. stand to<br className="hidden sm:block" />
-        win 100% cashback when you pay via CRED pay
+        taking it from theory. into real life.<br className="hidden sm:block" />
+       
+from abstract ideals. to something cool, modern, everyday.
       </p>
 
       {/* ---- Bottom Pink Stripes ---- */}

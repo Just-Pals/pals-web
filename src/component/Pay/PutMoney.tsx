@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function PayInstantly() {
+export default function PutMoney() {
   return (
     <section className="w-full bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-24 md:py-32 lg:py-40">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
@@ -31,11 +31,11 @@ export default function PayInstantly() {
           className="md:w-1/2 order-2 md:order-2"
         >
           <h2 className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[90px] text-[#00FFA3] font-serif italic leading-none">
-            add <br/> your pals
+            put your <br/>  money to work
           </h2>
 
           <p className="text-white/70 mt-4 sm:mt-6 text-[14px] sm:text-[16px] md:text-lg max-w-md">
-            bring in the people you trust the most.
+            borrow when you need, lend when you can, invest as a group.
           </p>
         </motion.div>
       </div>

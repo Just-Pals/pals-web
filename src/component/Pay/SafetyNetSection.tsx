@@ -62,7 +62,8 @@ export default function SafetyNetSection() {
         transition={{ duration: 0.8 }}
         className="text-center text-[32px] sm:text-[42px] md:text-[60px] lg:text-[95px] font-serif italic text-[#C8FFD4] leading-none"
       >
-        meet your skin
+        {/* meet your skin */}
+        gift collectibles, coupons.
       </motion.h2>
 
       <motion.p

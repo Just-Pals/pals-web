@@ -31,20 +31,19 @@ export default function PartnersSection() {
           className="mt-8 sm:mt-12 md:mt-14 text-center max-w-3xl mx-auto leading-relaxed text-[18px] sm:text-[22px] md:text-[26px] lg:text-[32px] font-light"
         >
         <p>
-          shopping is hard.{" "}
-          <span className="text-[#FF4AF0] italic font-semibold">for others.</span>
+          Because your circle {"> "}
+          <span className="text-[#FF4AF0] italic font-semibold">any bank.</span>
+        </p>
+        <p className="mt-4">
+          and your spends deserve{" "}
+          <span className="text-[#00E6FF] italic font-semibold">rewards 
+            <br/> and duas</span>,
+          <span className="text-[#C7FF4A] italic font-semibold"> your bank can’t match.</span>,
         </p>
 
         <p className="mt-4">
-          for you, it’s as easy as picking a{" "}
-          <span className="text-[#00E6FF] italic font-semibold">partner brand outlet</span>,
-          paying with{" "}
-          <span className="text-[#C7FF4A] italic font-semibold">PALS pay</span>,
-        </p>
-
-        <p className="mt-4">
-          and{" "}
-          <span className="text-[#FFB347] italic font-semibold">claiming 2x cashback.</span>
+        
+          <span className="text-[#FFB347] italic font-semibold">your network = your networth.</span>
         </p>
       </motion.div>
       </div>

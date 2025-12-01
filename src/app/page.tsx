@@ -1,35 +1,35 @@
-import Hero from "@/component/HomePage/Hero";
+import Hero from "@/component/Pay/Hero";
+import Statement from "@/component/Pay/Statement";
+import QRSection from "@/component/Pay/QRSection";
+import RewardsInstant from "@/component/Pay/RewardsInstant";
+import PayInstantly from "@/component/Pay/PayInstantly";
+import PartnersSection from "@/component/Pay/PartnersSection";
+import SecuritySection from "@/component/Pay/SecuritySection";
+import SafetyNetSection from "@/component/Pay/SafetyNetSection";
+import FlairsSection from "@/component/Pay/FlairsSection";
+import Footer from "@/component/Pay/Footer";
 import Navbar from "@/component/Navbar";
-import FaqSection from "@/component/HomePage/FaqSection";
-import StorySection from "@/component/HomePage/StorySection";
-import ProofSection from "@/component/HomePage/ProofSection";
-import CardsSection from "@/component/HomePage/CardsSection";
-import PolicySection from "@/component/HomePage/PolicySection";
 import DownloadCard from "@/component/HomePage/DownloadCard";
-import RewardsSection from "@/component/HomePage/RewardsSection";
-import UpgradeSection from "@/component/HomePage/UpgradeSection";
-import PhonesShowcase from "@/component/HomePage/PhonesShowcase";
-import SecuritySection from "@/component/HomePage/SecuritySection";
-import NotEveryoneSection from "@/component/HomePage/NotEveryoneSection";
-import Footer from "@/component/Footer";
+import PerksSection from "@/component/Pay/PerksSection";
+import PutMoney from "@/component/Pay/PutMoney";
 
-export default function Home() {
+export default function PayPage() {
   return (
-    <main className="relative w-full h-full overflow-x-hidden">
-      <Navbar />
+    <main className="overflow-hidden bg-black text-white">
+      <Navbar/>
       <Hero />
-      <StorySection />
-      <PhonesShowcase />
-      <CardsSection />
-      <UpgradeSection />
-      <RewardsSection />
-      <SecuritySection />
-      <ProofSection />
-      <NotEveryoneSection />
-      <FaqSection />
-      <PolicySection />
-      <DownloadCard />
-      <Footer />
+      <Statement />
+      <QRSection />
+      <PayInstantly/>
+      <RewardsInstant/>
+      <PutMoney/>
+      <PartnersSection/>
+      <SecuritySection/>
+      <SafetyNetSection/>
+      <FlairsSection />
+      < PerksSection />
+       <DownloadCard />
+      <Footer/>
     </main>
   );
 }

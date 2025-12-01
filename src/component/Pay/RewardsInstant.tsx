@@ -15,13 +15,11 @@ export default function RewardsInstant() {
           className="md:w-1/2 order-2 md:order-1"
         >
           <h2 className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[90px] text-[#00FFA3] font-serif italic leading-none">
-            earn <br /> assured <br /> rewards
+           club <br/> your money
           </h2>
 
           <p className="text-white/70 mt-4 sm:mt-6 text-[14px] sm:text-[16px] md:text-lg max-w-md">
-            the experience isn't the only reward.
-            earn assured cashback, coins, and
-            more on every transaction.
+           everyone contributes, and the pool grows.
           </p>
         </motion.div>
 

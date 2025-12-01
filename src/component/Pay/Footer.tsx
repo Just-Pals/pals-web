@@ -37,14 +37,16 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto">
           {/* Top Section - Main Message */}
           <div className="max-w-6xl">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif italic leading-tight">
-            <span className="text-white">experience payments for the top 1%.</span>
-            <br />
-            <span className="text-white">access </span>
-            <span className="text-[#CFFF00]">PALS pay</span>
-            <span className="text-white"> on the app.</span>
-          </h2>
-        </div>
+  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif italic leading-tight">
+    <span className="text-purple-200">PALS is a members-only circle.</span>
+    <br />
+    <span className="text-teal-200">where your pals become your power.</span>
+    <br />
+    <span className="text-yellow-300">gold-backed.</span>{" "}
+    <span className="text-purple-100">0% interest.</span>
+  </h2>
+</div>
+
 
         {/* Bottom Section - Links and Logo */}
         <div className="mt-16 sm:mt-24 md:mt-32 lg:mt-40 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-12">

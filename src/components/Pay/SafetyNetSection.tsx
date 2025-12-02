@@ -41,16 +41,47 @@ export default function SafetyNetSection() {
           className="max-w-lg mt-8 sm:mt-12 md:mt-0"
         >
           <h2 className="text-[22px] sm:text-[26px] md:text-[28px] lg:text-[34px] font-semibold leading-tight">
-            your payments come <br /> with a safety net
+            gold-backed
           </h2>
 
           <p className="text-white/70 mt-4 sm:mt-6 leading-relaxed text-[14px] sm:text-[16px] md:text-lg">
-            in the unlikely event of a payment not going through, make another
-            one. if you're charged for the first, PALS will credit you the money
-            back.
+            your pool is anchored in real gold, <br/> steady when everything else isn’t.
+
           </p>
         </motion.div>
       </div>
+
+  <div className="mt-16 sm:mt-24 md:mt-32 lg:mt-40 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
+
+        {/* Left Text */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-md"
+        >
+          <p className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-semibold leading-tight">
+            zero interest
+          </p>
+
+          <p className="text-white/70 text-[14px] sm:text-[16px] md:text-lg mt-4 sm:mt-5 leading-relaxed">
+            borrow without the burden. <br/> no interest. no surprises. no nonsense.
+          </p>
+        </motion.div>
+
+        {/* Toggle */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative"
+        >
+          <button className="w-[140px] sm:w-[160px] md:w-[180px] h-[55px] sm:h-[65px] md:h-[70px] border border-white rounded-full flex items-center px-2 sm:px-3 transition-all group">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 bg-white rounded-full shadow-lg group-hover:translate-x-[calc(100%-1rem)] sm:group-hover:translate-x-[calc(100%-1.25rem)] md:group-hover:translate-x-24 transition-transform"></div>
+          </button>
+        </motion.div>
+
+        </div>
 
       {/* SPACER */}
       <div className="h-[120px] sm:h-[160px] md:h-[200px] lg:h-[260px]"></div>

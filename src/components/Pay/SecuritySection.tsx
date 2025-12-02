@@ -33,13 +33,11 @@ export default function SecuritySection() {
           className="max-w-md"
         >
           <p className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-semibold leading-tight">
-            switch to anonymity, <br />
-            create an alias UPI ID.
+            secure
           </p>
 
           <p className="text-white/70 text-[14px] sm:text-[16px] md:text-lg mt-4 sm:mt-5 leading-relaxed">
-            hide your sensitive details from merchants when you pay,
-            because your details are for your eyes only.
+            built with bank-grade protection, <br/>without the bank-grade complications.
           </p>
         </motion.div>
 

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import Container from "../common/Container";
 
 const features = [
   { 
@@ -54,6 +55,7 @@ export default function UpgradeSection() {
 
   return (
     <section className="bg-black py-12 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6 select-none overflow-hidden">
+      <Container>
       <h2 className="text-[28px] xs:text-[32px] sm:text-[42px] md:text-[52px] lg:text-[72px] font-semibold mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-[1.05] px-2">
         upgrade your life.
         <br />bit by bit.
@@ -98,6 +100,7 @@ export default function UpgradeSection() {
           ))}
         </motion.div>
       </div>
+      </Container>
     </section>
   );
 }

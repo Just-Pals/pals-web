@@ -43,7 +43,7 @@ export default function PerksSection() {
   return (
     <Section backgroundColor="black" padding="xl">
       <Container>
-        <div className="flex flex-col gap-16 sm:gap-20 md:gap-24 lg:gap-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 sm:gap-x-16 gap-y-20 lg:gap-y-24">
 
           {perks.map((perk, index) => (
             <motion.div

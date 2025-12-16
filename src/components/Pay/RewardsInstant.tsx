@@ -31,11 +31,11 @@ export default function RewardsInstant() {
           className="md:w-1/2 flex justify-center order-1 md:order-2"
         >
           <Image
-            src="/pay/phone-rewards.png"
+            src="/pay/club-your-money.png"
             alt="Rewards UI"
-            width={350}
-            height={700}
-            className="object-contain w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px]"
+            width={960}
+            height={1132}
+            className=""
           />
         </motion.div>
       </div>

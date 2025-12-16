@@ -15,11 +15,11 @@ export default function PayInstantly() {
           className="md:w-1/2 flex justify-center order-1 md:order-1"
         >
           <Image
-            src="/pay/phone-pay.png"
+            src="/pay/add-pals.png"
             alt="Pay Instantly UI"
-            width={350}
-            height={700}
-            className="object-contain w-[200px] sm:w-[250px] md:w-[300px] lg:w-[350px]"
+            width={960}
+            height={1132}
+            className=""
           />
         </motion.div>
 

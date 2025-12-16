@@ -5,7 +5,7 @@ import Container from "../common/Container";
 
 export default function QRSection() {
   return (
-    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-24 md:py-32 lg:py-40">
+    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-14 sm:py-16 md:py-24 lg:py-32">
       <Container>
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           {/* TEXT */}

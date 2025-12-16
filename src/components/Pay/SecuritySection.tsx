@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function SecuritySection() {
   return (
-    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-16 sm:py-24 md:py-32 lg:py-40">
+    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-14 sm:py-16 md:py-24 lg:py-32">
       <div className="max-w-7xl mx-auto">
         {/* ---- Heading ---- */}
         <motion.h2

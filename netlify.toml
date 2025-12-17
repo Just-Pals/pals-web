@@ -1,8 +1,5 @@
 [build]
-  command = "next build"
-  publish = ".next"
+command = "next build"
 
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
+[[plugins]]
+package = "@netlify/plugin-nextjs"

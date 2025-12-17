@@ -1,4 +1,3 @@
-import TeamNavbar from "@/components/Team/Navbar";
 import TeamHero from "@/components/Team/Hero";
 import Victors from "@/components/Team/Victors";
 import WinnersSlider from "@/components/Team/WinnersSlider";

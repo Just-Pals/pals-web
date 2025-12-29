@@ -121,7 +121,7 @@ export default function PerksSection() {
                     duration: 0.7,
                     ease: "easeInOut",
                   }}
-                  className="h-card flex-col md:flex-[0_0_50vw] flex-[0_0_100vw] md:w-[50vw] w-screen h-full flex items-center justify-center overflow-hidden"
+                  className="h-card flex-col md:flex-[0_0_50vw] flex-[0_0_100vw] md:w-[50vw] w-screen h-full flex items-center justify-center overflow-hidden px-4"
                 >
                   <motion.div
                     animate={{ y: [0, -12, 0] }}

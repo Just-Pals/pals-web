@@ -55,6 +55,7 @@ export default function FeatureSections() {
       <style>{`
         .horizontal-section {
           position: relative;
+          width: 100%;
           height: 100vh;
           overflow: hidden;
           background: #050816;
@@ -62,6 +63,7 @@ export default function FeatureSections() {
         .horizontal-track {
           display: flex;
           height: 100%;
+          width: 100%;
         }
         /* make each direct child take the full viewport width so only one shows */
         .horizontal-track > * {
@@ -71,6 +73,7 @@ export default function FeatureSections() {
           display: flex;
           align-items: center;
           justify-content: center;
+          overflow: hidden;
         }
        
       `}</style>

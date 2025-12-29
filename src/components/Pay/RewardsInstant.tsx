@@ -12,14 +12,14 @@ export default function RewardsInstant() {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="md:w-1/2 order-2 md:order-1"
+          className="md:w-1/2"
         >
           <h2 className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[90px] text-[#00FFA3] font-serif italic leading-none">
-           club <br/> your money
+            club <br /> your money
           </h2>
 
           <p className="text-white/70 mt-4 sm:mt-6 text-[14px] sm:text-[16px] md:text-lg max-w-md">
-           everyone contributes, and the pool grows.
+            everyone contributes, and the pool grows.
           </p>
         </motion.div>
 
@@ -28,7 +28,7 @@ export default function RewardsInstant() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="md:w-1/2 flex justify-center order-1 md:order-2"
+          className="md:w-1/2 flex justify-center"
         >
           <Image
             src="/pay/club-your-money.png"

@@ -12,6 +12,7 @@ import Navbar from "@/components/Navbar";
 import DownloadCard from "@/components/HomePage/DownloadCard";
 import PerksSection from "@/components/Pay/PerksSection";
 import PutMoney from "@/components/Pay/PutMoney";
+import FeatureSections from "@/components/Pay/FeatureSections";
 
 export default function PayPage() {
   return (
@@ -19,10 +20,11 @@ export default function PayPage() {
       <Navbar/>
       <Hero />
       <Statement />
-      <QRSection />
+      <FeatureSections/>
+      {/* <QRSection />
       <PayInstantly/>
       <RewardsInstant/>
-      <PutMoney/>
+      <PutMoney/> */}
       <PartnersSection/>
       <SecuritySection/>
       <SafetyNetSection/>

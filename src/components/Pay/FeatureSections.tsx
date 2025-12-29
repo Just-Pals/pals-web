@@ -58,7 +58,6 @@ export default function FeatureSections() {
           width: 100%;
           height: 100vh;
           overflow: hidden;
-          background: #050816;
         }
         .horizontal-track {
           display: flex;

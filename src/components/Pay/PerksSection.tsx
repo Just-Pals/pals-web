@@ -86,7 +86,7 @@ export default function PerksSection() {
   return (
     <>
     <style>{`
-        .horizontal-section {
+        .track-section {
           position: relative;
           width: 100%;
           height: 100vh;
@@ -106,8 +106,8 @@ export default function PerksSection() {
         <div className="relative">
           <div
             ref={sectionRef}
-            className="horizontal-section"
-            id="horizontal-scroll"
+            className="track-section"
+            id="track-scroll"
           >
             <div ref={trackRef} className="flex h-full scroll-track w-full">
               {perks.map((perk, index) => (

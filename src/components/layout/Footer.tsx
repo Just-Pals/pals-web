@@ -77,7 +77,7 @@ export default function Footer({ variant = "default", showMarquee = false }: Foo
 
                 {/* Copyright */}
                 <p className="text-xs sm:text-sm text-white/50">
-                  copyright © 2020-24 Dreamplug Technologies Pvt Ltd.
+                  © 2025 PALS, Inc.
                 </p>
               </div>
 

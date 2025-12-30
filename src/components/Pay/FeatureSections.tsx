@@ -8,21 +8,21 @@ import PayInstantly from "./PayInstantly";
 import RewardsInstant from "./RewardsInstant";
 import PutMoney from "./PutMoney";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function FeatureSections() {
   const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
+    if (typeof window !== "undefined") gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
       const section = sectionRef.current;
       const track = trackRef.current;
       if (!section || !track) return;
 
-      const cards = gsap.utils.toArray(".h-card");
-      // compute scrollable width (total track width minus one viewport)
-      const totalWidth = track.scrollWidth - window.innerWidth;
+      const cards = gsap.utils.toArray(track.querySelectorAll(".h-card"));
+      // compute scrollable width (total track width minus visible section width)
+      const sectionWidth = section.clientWidth || window.innerWidth;
+      const totalWidth = track.scrollWidth - sectionWidth;
 
       const horizontalAnimation = gsap.to(track, {
         x: () => -totalWidth,

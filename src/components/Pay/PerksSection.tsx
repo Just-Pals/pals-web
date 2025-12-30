@@ -51,11 +51,9 @@ export default function PerksSection() {
       const track = trackRef.current;
       if (!section || !track) return;
 
-      const cards = gsap.utils.toArray(".h-card");
-      // ensure there's space at the end so the last card can fully scroll into view
-      const sectionWidth = section.clientWidth || window.innerWidth;
-      track.style.paddingRight = `${sectionWidth}px`;
+      const cards = gsap.utils.toArray(track.querySelectorAll(".h-card"));
       // compute scrollable width (total track width minus visible section width)
+      const sectionWidth = section.clientWidth || window.innerWidth;
       const totalWidth = track.scrollWidth - sectionWidth;
 
       const horizontalAnimation = gsap.to(track, {
@@ -67,6 +65,7 @@ export default function PerksSection() {
           end: () => `+=${totalWidth}`, // scroll distance equals track.scrollWidth - window.innerWidth
           scrub: true,
           pin: true,
+          pinSpacing: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
         },
@@ -97,10 +96,24 @@ export default function PerksSection() {
           height: 100%;
           width: 100%;
         }
-       
-       
+        /* ensure each direct child takes full viewport on mobile, half viewport on md+ */
+        .scroll-track > * {
+          flex: 0 0 100vw;
+          width: 100vw;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
+        @media (min-width: 768px) {
+          .scroll-track > * {
+            flex: 0 0 50vw;
+            width: 50vw;
+          }
+        }
       `}</style>
-    
+
     <Section backgroundColor="black" padding="xl">
       <Container>
         <div className="relative">

@@ -12,7 +12,8 @@ export default function PartnersSection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[650px]"
+          // className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[650px]"
+          className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[800px] lg:max-w-[950px]"
         >
           <Image
             src="/pay/partners-platform.png"

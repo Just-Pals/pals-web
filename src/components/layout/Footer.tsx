@@ -124,11 +124,11 @@ export default function Footer({ variant = "default", showMarquee = false }: Foo
         </div>
 
         <div className="flex flex-wrap gap-x-6 sm:gap-x-8 md:gap-x-10 gap-y-3 sm:gap-y-4 text-[12px] sm:text-[13px] md:text-[14px] mb-6 sm:mb-8 md:mb-10">
-          <a href="#" className="hover:text-white/80 transition-colors">Help Center</a>
-          <a href="#" className="hover:text-white/80 transition-colors">Trust & Safety</a>
-          <a href="#" className="hover:text-white/80 transition-colors">Our Fees</a>
-          <a href="#" className="hover:text-white/80 transition-colors">Why PALS</a>
-          <a href="#" className="hover:text-white/80 transition-colors">Contact Us</a>
+          <a href="/help-center" className="hover:text-white/80 transition-colors">Help Center</a>
+          <a href="/trust-safety" className="hover:text-white/80 transition-colors">Trust & Safety</a>
+          <a href="/fees" className="hover:text-white/80 transition-colors">Our Fees</a>
+          <a href="/why-pals" className="hover:text-white/80 transition-colors">Why PALS</a>
+          <a href="/contact" className="hover:text-white/80 transition-colors">Contact Us</a>
         </div>
 
         <div className="border-t border-white/10 my-6 sm:my-8 md:my-10"></div>
@@ -148,8 +148,8 @@ export default function Footer({ variant = "default", showMarquee = false }: Foo
 
           <div className="flex gap-6">
             <a href="#" className="hover:text-white/80 transition-colors">Accessibility</a>
-            <a href="#" className="hover:text-white/80 transition-colors">Terms</a>
-            <a href="#" className="hover:text-white/80 transition-colors">Privacy</a>
+            <a href="/terms" className="hover:text-white/80 transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-white/80 transition-colors">Privacy</a>
             <a href="#" className="hover:text-white/80 transition-colors">Cookies</a>
           </div>
         </div>

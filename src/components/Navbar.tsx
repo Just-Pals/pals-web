@@ -4,10 +4,12 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState("About Us");
+  const router = useRouter();
 
   const menuData: Record<string, any[]> = {
   "About Us": [
@@ -42,6 +44,7 @@ export default function Navbar() {
     { icon: "💰", label: "Club", link: "/club" },
     { icon: "⭐", label: "Pal Score", link: "/pal-score" },
     { icon: "👨‍👩‍👧‍👦", label: "Team", link: "/team" },
+    { icon: "✍️", label: "Register", link: "/register" },
   ],
 };
 
@@ -95,51 +98,72 @@ export default function Navbar() {
           </Link>
         </motion.div>
 
-        {/* BUTTON */}
-        <motion.button
-          onClick={() => setMenuOpen(true)}
-          className="border border-white/40 rounded-xl px-3 sm:px-4 md:px-6 py-2 md:py-3 flex items-center gap-2 sm:gap-4 md:gap-6 bg-black/20 backdrop-blur-md hover:bg-white/10 transition-all"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-        >
-         <span className="tracking-widest text-[10px] sm:text-xs text-white/70 hidden sm:inline">
-            {/* CRED INDUSIND BANK <br /> RUPAY CREDIT CARD */}
-            Faith-Powered
-          </span>
+        {/* REGISTER BUTTON & MENU BUTTON */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Link
+              href="/register"
+              className="border border-white/40 rounded-xl px-3 sm:px-4 md:px-5 py-2 md:py-2.5 bg-white text-black hover:bg-white/90 transition-all text-xs sm:text-sm font-medium block"
+              onClick={(e) => {
+                e.preventDefault();
+                router.push("/register");
+              }}
+            >
+              Register
+            </Link>
+          </motion.div>
 
-          {/* Hamburger Icon with Animation */}
-          <AnimatePresence mode="wait">
-            {!menuOpen && (
-              <motion.div
-                key="hamburger"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="flex flex-col gap-[5px] xs:gap-[6px]"
-              >
-                <motion.span
-                  className="w-5 xs:w-6 h-[2px] bg-white"
-                  initial={{ width: 0 }}
-                  animate={{ width: 20 }}
-                  transition={{ delay: 0.1 }}
-                />
-                <motion.span
-                  className="w-5 xs:w-6 h-[2px] bg-white"
-                  initial={{ width: 0 }}
-                  animate={{ width: 20 }}
-                  transition={{ delay: 0.2 }}
-                />
-                <motion.span
-                  className="w-5 xs:w-6 h-[2px] bg-white"
-                  initial={{ width: 0 }}
-                  animate={{ width: 20 }}
-                  transition={{ delay: 0.3 }}
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.button>
+          <motion.button
+            onClick={() => setMenuOpen(true)}
+            className="border border-white/40 rounded-xl px-3 sm:px-4 md:px-6 py-2 md:py-3 flex items-center gap-2 sm:gap-4 md:gap-6 bg-black/20 backdrop-blur-md hover:bg-white/10 transition-all"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+           <span className="tracking-widest text-[10px] sm:text-xs text-white/70 hidden sm:inline">
+              {/* CRED INDUSIND BANK <br /> RUPAY CREDIT CARD */}
+              Faith-Powered
+            </span>
+
+            {/* Hamburger Icon with Animation */}
+            <AnimatePresence mode="wait">
+              {!menuOpen && (
+                <motion.div
+                  key="hamburger"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex flex-col gap-[5px] xs:gap-[6px]"
+                >
+                  <motion.span
+                    className="w-5 xs:w-6 h-[2px] bg-white"
+                    initial={{ width: 0 }}
+                    animate={{ width: 20 }}
+                    transition={{ delay: 0.1 }}
+                  />
+                  <motion.span
+                    className="w-5 xs:w-6 h-[2px] bg-white"
+                    initial={{ width: 0 }}
+                    animate={{ width: 20 }}
+                    transition={{ delay: 0.2 }}
+                  />
+                  <motion.span
+                    className="w-5 xs:w-6 h-[2px] bg-white"
+                    initial={{ width: 0 }}
+                    animate={{ width: 20 }}
+                    transition={{ delay: 0.3 }}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
+        </div>
       </nav>
 
       {/* MENU OVERLAY */}

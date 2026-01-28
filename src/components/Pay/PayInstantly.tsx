@@ -15,7 +15,7 @@ export default function PayInstantly() {
           transition={{ duration: 0.8 }}
           className="md:w-1/2"
         >
-          <h2 className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[90px] text-[#00FFA3] font-serif italic leading-none">
+          <h2 className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[90px] text-[#00ffa3] font-serif italic leading-none">
             add <br/> your pals
           </h2>
 

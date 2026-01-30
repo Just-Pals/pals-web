@@ -18,8 +18,8 @@ export default function PartnersSection() {
           <Image
             src="/pay/partners-platform.png"
             alt="Partner Brands Platform"
-            width={650}
-            height={400}
+            width={5500}
+            height={350}
             className="mx-auto w-full h-auto"
           />
         </motion.div>

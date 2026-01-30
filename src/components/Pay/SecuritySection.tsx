@@ -37,7 +37,7 @@ export default function SecuritySection() {
   const text = "on PALS pay, <br/> deserve better. <br/> and so much more.";
 
   return (
-    <section className="w-full bg-black text-white py-16 lg:py-32">
+    <section className="w-full bg-black text-white py-16 lg:py-0 mt-30">
       
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 2xl:px-24">
         {/* Heading */}
@@ -61,8 +61,8 @@ export default function SecuritySection() {
         </h2>
 
         {/* Feature Row */}
-        <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-16">
-          {/* Text */}
+        {/* <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-16">
+          
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,7 +78,7 @@ export default function SecuritySection() {
             </p>
           </motion.div>
 
-          {/* Image */}
+          
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -92,7 +92,7 @@ export default function SecuritySection() {
               className="w-[220px] sm:w-[260px] md:w-[320px]"
             />
           </motion.div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

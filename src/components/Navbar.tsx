@@ -12,41 +12,41 @@ export default function Navbar() {
   const router = useRouter();
 
   const menuData: Record<string, any[]> = {
-  "About Us": [
-    { icon: "🎯", label: "Mission" },
-    { icon: "👥", label: "Team" },
-  ],
+    "About Us": [
+      { icon: "🎯", label: "Mission" },
+      { icon: "👥", label: "Team" },
+    ],
 
-  Offerings: [
-    { icon: "🛒", label: "Purchase" },
-    { icon: "💳", label: "Loan" },
-    { icon: "🤲", label: "Charity" },
-    { icon: "📈", label: "Invest" },
-    { icon: "🏛️", label: "Waqf" },
-  ],
+    Offerings: [
+      { icon: "🛒", label: "Purchase" },
+      { icon: "💳", label: "Loan" },
+      { icon: "🤲", label: "Charity" },
+      { icon: "📈", label: "Invest" },
+      { icon: "🏛️", label: "Waqf" },
+    ],
 
-  Features: [
-    { icon: "🌀", label: "Pool" },
-    { icon: "🚨", label: "Pal SOS" },
-    { icon: "🏅", label: "Gold Vault" },
-    { icon: "👛", label: "Wallet" },
-    { icon: "🚀", label: "Space" },
-  ],
+    Features: [
+      { icon: "🌀", label: "Pool" },
+      { icon: "🚨", label: "Pal SOS" },
+      { icon: "🏅", label: "Gold Vault" },
+      { icon: "👛", label: "Wallet" },
+      { icon: "🚀", label: "Space" },
+    ],
 
-  "Curated Pools": [
-    { icon: "❤️", label: "Health" },
-    { icon: "🕋", label: "Umrah" },
-    { icon: "💍", label: "Marriage" },
-  ],
+    "Curated Pools": [
+      { icon: "❤️", label: "Health" },
+      { icon: "🕋", label: "Umrah" },
+      { icon: "💍", label: "Marriage" },
+    ],
 
-  Settings: [
-    { icon: "📝", label: "Blog", link: "/blog" },
-    { icon: "💰", label: "Club", link: "/club" },
-    { icon: "⭐", label: "Pal Score", link: "/pal-score" },
-    { icon: "👨‍👩‍👧‍👦", label: "Team", link: "/team" },
-    { icon: "✍️", label: "Register", link: "/register" },
-  ],
-};
+    Settings: [
+      { icon: "📝", label: "Blog", link: "/blog" },
+      { icon: "💰", label: "Club", link: "/club" },
+      { icon: "⭐", label: "Pal Score", link: "/pal-score" },
+      { icon: "👨‍👩‍👧‍👦", label: "Team", link: "/team" },
+      { icon: "✍️", label: "Register", link: "/register" },
+    ],
+  };
 
   const menuItems = Object.keys(menuData);
 
@@ -63,7 +63,7 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            className="flex items-center gap-2 xs:gap-2.5 sm:gap-3 cursor-pointer"
+            className="flex items-center gap-0 xs:gap-0 sm:gap-0 cursor-pointer"
           >
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
@@ -80,18 +80,49 @@ export default function Navbar() {
             >
               <Image
                 src="/common/logo.png"
-                width={45}
-                height={45}
+                width={60}
+                height={60}
                 alt="pals home"
                 priority
-                className="w-7 h-7 xs:w-8 xs:h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-[45px] lg:h-[45px]"
+                className="
+               w-10 h-10
+               xs:w-11 xs:h-11
+               sm:w-12 sm:h-12
+               md:w-14 md:h-14
+               lg:w-[65px] lg:h-[65px]
+                                                  "
               />
             </motion.div>
             <motion.span
-              className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-white whitespace-nowrap truncate"
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
+              className="
+              text-lg 
+              xs:text-xl 
+              sm:text-2xl 
+              md:text-3xl 
+              lg:text-4xl
+              font-semibold 
+              whitespace-nowrap 
+              truncate
+                      "
+              initial={{ opacity: 0, x: -10, color: "#ffffff" }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                color: [
+                  "#ffffff",
+                  "#cfff00",
+                  "#4169e1",
+                  "#ed683fff",
+                  "#2be68fff",
+                ],
+              }}
+              transition={{
+                delay: 0.3,
+                duration: 8,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+              }}
             >
               pals
             </motion.span>
@@ -125,7 +156,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-           <span className="tracking-widest text-[10px] sm:text-xs text-white/70 hidden sm:inline">
+            <span className="tracking-widest text-[10px] sm:text-xs text-white/70 hidden sm:inline">
               {/* CRED INDUSIND BANK <br /> RUPAY CREDIT CARD */}
               Faith-Powered
             </span>
@@ -174,9 +205,8 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-               className=
-               " fixed inset-0 bg-black z-[999] pt-2 xs:pt-2 sm:pt-3 md:pt-4 lg:pt-6 xl:pt-8 px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 pb-3 xs:pb-4 sm:pb-6 md:pb-8 lg:pb-12 xl:pb-15 overflow-y-auto "
-         >
+            className=" fixed inset-0 bg-black z-[999] pt-2 xs:pt-2 sm:pt-3 md:pt-4 lg:pt-6 xl:pt-8 px-3 xs:px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 pb-3 xs:pb-4 sm:pb-6 md:pb-8 lg:pb-12 xl:pb-15 overflow-y-auto "
+          >
             {/* TOP ROW INSIDE MENU */}
             <motion.div
               initial={{ y: -20, opacity: 0 }}
@@ -206,11 +236,11 @@ export default function Navbar() {
                   }}
                   className="flex-shrink-0"
                 >
-                  <Image 
-                    src="/common/logo.png" 
-                    width={40} 
-                    height={40} 
-                    alt="pals home" 
+                  <Image
+                    src="/common/logo.png"
+                    width={40}
+                    height={40}
+                    alt="pals home"
                     className="w-8 h-8 xs:w-9 xs:h-9 sm:w-10 sm:h-10 md:w-[40px] md:h-[40px]"
                   />
                 </motion.div>
@@ -290,16 +320,17 @@ export default function Navbar() {
                   >
                     {menuData[activeMenu].map((item, i) => (
                       <motion.div
-  key={i}
-  onClick={() => item.link && (window.location.href = item.link)}
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ delay: i * 0.05 }}
-  whileHover={{ scale: 1.05, y: -5 }}
-  whileTap={{ scale: 0.98 }}
-  className="flex flex-col items-center text-center cursor-pointer touch-manipulation p-2 xs:p-3 sm:p-4"
->
-
+                        key={i}
+                        onClick={() =>
+                          item.link && (window.location.href = item.link)
+                        }
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: i * 0.05 }}
+                        whileHover={{ scale: 1.05, y: -5 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex flex-col items-center text-center cursor-pointer touch-manipulation p-2 xs:p-3 sm:p-4"
+                      >
                         {item.icon && (
                           <motion.span
                             className="text-3xl xs:text-4xl sm:text-5xl mb-1.5 xs:mb-2 sm:mb-2.5"

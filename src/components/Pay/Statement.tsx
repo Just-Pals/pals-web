@@ -55,7 +55,7 @@ export default function Statement() {
 
   const text = "the future of money <br/> … is social.";
   return (
-    <section className="bg-black text-center py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 overflow-hidden">
+    <section className="bg-black text-center py-16 sm:py-24 md:py-32 lg:py-15 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2
           ref={revealRef}

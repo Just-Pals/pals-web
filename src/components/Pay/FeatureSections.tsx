@@ -81,7 +81,7 @@ export default function FeatureSections() {
         className="horizontal-section"
         id="horizontal-scroll"
       >
-        <div ref={trackRef} className="flex h-full horizontal-track w-full">
+        <div ref={trackRef} className="flex h-full horizontal-track w-full pt-0">
           
           <QRSection />
           <PayInstantly />

@@ -20,11 +20,12 @@ export default function FlairsSection() {
     { src: "/flairs/flair-2.png", x: 280, y: -80, delay: 0.4, mobileX: 100, mobileY: -30 },
     { src: "/flairs/flair-3.png", x: -300, y: 200, delay: 0.6, mobileX: -110, mobileY: 80 },
     { src: "/flairs/flair-4.png", x: 300, y: 200, delay: 0.8, mobileX: 110, mobileY: 80 },
-    { src: "/flairs/flair-5.png", x: 0, y: 380, delay: 1.0, mobileX: 0, mobileY: 150 },
+    { src: "/flairs/flair-5.png", x: 0, y: 390, delay: 1.0, mobileX: 0, mobileY: 150 },
   ];
-
+    
+  // padding=""
   return (
-    <Section className="relative min-h-screen overflow-hidden" padding="xl">
+    <Section className="relative min-h-screen overflow-hidden"> 
       {/* PLANET BACKGROUND - positioned higher and larger */}
       <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[1800px] h-[1800px] opacity-60 pointer-events-none z-0">
         <Image
@@ -47,7 +48,7 @@ export default function FlairsSection() {
           viewport={{ once: true }}
           className="relative z-20 text-center mb-16 sm:mb-20 md:mb-32"
         >
-          <p className="text-white/40 tracking-[0.3em] text-[10px] sm:text-xs md:text-sm uppercase mb-3 sm:mb-4">
+          <p className="text-white/40 tracking-[0.3em] text-[10px] sm:text-xs md:text-sm uppercase mb-3 sm:mb-4 mt-25">
             BEHOLD
           </p>
           <h1 className="text-[48px] sm:text-[64px] md:text-[100px] lg:text-[140px] xl:text-[180px] font-serif italic leading-none text-[#4169E1]">

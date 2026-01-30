@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function PartnersSection() {
   return (
-    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-14 sm:py-16 md:py-24 lg:py-32">
+    <section className="w-full bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-14 sm:py-16 md:py-24 lg:py-1">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* TOP BRAND PLATFORM IMAGE */}
         <motion.div
@@ -13,7 +13,7 @@ export default function PartnersSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           // className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-[650px]"
-          className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[800px] lg:max-w-[950px]"
+          className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[800px] lg:max-w-[950px] py-0 -mt-20"
         >
           <Image
             src="/pay/partners-platform.png"

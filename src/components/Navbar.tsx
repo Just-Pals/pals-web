@@ -118,7 +118,7 @@ export default function Navbar() {
               }}
               transition={{
                 delay: 0.3,
-                duration: 8,
+                duration: 4,
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "easeInOut",

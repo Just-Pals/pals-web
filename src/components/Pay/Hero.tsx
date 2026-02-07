@@ -1,43 +1,49 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen bg-black flex flex-col justify-center items-center text-center overflow-hidden py-20 sm:py-0">
-
+    <section className="relative w-full min-h-screen bg-[url('/home/bg-hero.png')] bg-no-repeat flex flex-col justify-center items-center text-center overflow-hidden pt-20 md:pt-28">
       {/* Animated brown pencil stroke - top left */}
-      <motion.div
+      {/* <motion.div
         className="absolute top-[42%] left-[12%] md:left-[18%]"
         initial={{ opacity: 0, x: -50, rotate: -35 }}
         animate={{ opacity: 1, x: 0, rotate: -35 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <div className="w-16 h-2.5 rounded-full" style={{
-          background: "linear-gradient(135deg, #8B6F47 0%, #A0826D 100%)"
-        }} />
-      </motion.div>
+        <div
+          className="w-16 h-2.5 rounded-full"
+          style={{
+            background: "linear-gradient(135deg, #8B6F47 0%, #A0826D 100%)",
+          }}
+        />
+      </motion.div> */}
 
       {/* Animated orange circle - top right */}
-      <motion.div
+      {/* <motion.div
         className="absolute top-[20%] right-[8%] md:right-[12%]"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        <div className="w-20 h-20 md:w-28 md:h-28 rounded-full" style={{
-          background: "linear-gradient(135deg, #FF8A5B 0%, #FF6B4A 100%)"
-        }} />
-      </motion.div>
+        <div
+          className="w-20 h-20 md:w-28 md:h-28 rounded-full"
+          style={{
+            background: "linear-gradient(135deg, #FF8A5B 0%, #FF6B4A 100%)",
+          }}
+        />
+      </motion.div> */}
 
       {/* Animated gray brush stroke - bottom right */}
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-[38%] right-[6%] md:right-[10%]"
         initial={{ opacity: 0, x: 50, rotate: 15 }}
         animate={{ opacity: 1, x: 0, rotate: 15 }}
         transition={{ duration: 1, delay: 0.7 }}
       >
         <div className="w-24 h-3 rounded-full bg-gray-500/80" />
-      </motion.div>
+      </motion.div> */}
 
       {/* Main text content */}
       <motion.div
@@ -48,60 +54,118 @@ export default function Hero() {
       >
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-center flex-wrap">
-            <h1 className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[120px] xl:text-[180px] font-black leading-none tracking-tighter" style={{
-              color: "#CFFF00"
-            }}>
-              PALS{" "}
-            </h1>
-            <h1 className="text-[40px] sm:text-[50px] md:text-[70px] lg:text-[120px] xl:text-[180px] font-serif italic leading-none" style={{
-              color: "#CFFF00",
-              fontFamily: "Georgia, serif"
-            }}>
-              
+            <h1 className="text-[40px] sm:text-[50px] md:text-[60px] lg:text-[80px] xl:text-[100px] font-bold leading-none text-white">
+              <span className="italic">Pals</span>{" "}
+              <span className="font-light">Over</span>{" "}
             </h1>
           </div>
-          <h2 className="text-[36px] sm:text-[45px] md:text-[60px] lg:text-[100px] xl:text-[150px] font-serif italic leading-none -mt-1 sm:-mt-2 md:-mt-4 lg:-mt-6 text-center" style={{
-            color: "#CFFF00",
-            fontFamily: "Georgia, serif"
-          }}>
-            over banks
+          <h2 className="text-[40px] sm:text-[50px] md:text-[60px] lg:text-[80px] xl:text-[100px] leading-none text-center font-light">
+            Banks
           </h2>
+          <p className="mt-2 text-xl font-semibold">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <div className="mt-7 flex items-center justify-center gap-6 sm:flex-row flex-col">
+            <a className="inline-block bg-white text-black px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-300 text-xl font-semibold">
+              Download the app
+            </a>
+            <a className="inline-block bg-white/20 text-white px-10 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-300 text-xl font-semibold">
+              View features
+            </a>
+          </div>
+          <div className="relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[150px] after:bg-gradient-to-b after:from-transparent after:to-black after:pointer-events-none">
+            <Image
+              src="/home/mobile.png"
+              alt="Hero Phone"
+              width={600}
+              height={400}
+              className="mx-auto mt-12"
+            />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2">
+              <Image
+                src="/home/circle.svg"
+                alt="Phone Glow"
+                width={800}
+                height={800}
+                className="animate-pulse"
+              />
+            </div>
+            <div className="absolute top-[60px] right-1/5 lg:block hidden">
+              <Image
+                src="/home/card-top-right.svg"
+                alt="Phone Line"
+                width={170}
+                height={128}
+                className=""
+              />
+            </div>
+            <div className="absolute bottom-[60px] right-1/7 lg:block hidden">
+              <Image
+                src="/home/card-bottom-right.svg"
+                alt="Phone Line"
+                width={162}
+                height={120}
+                className=""
+              />
+            </div>
+            <div className="absolute bottom-[60px] left-1/7 lg:block hidden">
+              <Image
+                src="/home/card-left.svg"
+                alt="Phone Line"
+                width={186}
+                height={106}
+                className=""
+              />
+            </div>
+          </div>
         </div>
       </motion.div>
 
       {/* Horizontal line across middle */}
-      <motion.div
+      {/* <motion.div
         className="absolute top-1/2 left-0 w-full h-[2px]"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 1.5, delay: 0.6 }}
         style={{
-          background: "linear-gradient(90deg, transparent 0%, #CFFF00 15%, #CFFF00 85%, transparent 100%)",
-          transformOrigin: "center"
+          background:
+            "linear-gradient(90deg, transparent 0%, #CFFF00 15%, #CFFF00 85%, transparent 100%)",
+          transformOrigin: "center",
         }}
-      />
+      /> */}
 
       {/* Gradient background bottom half */}
-      <div className="absolute bottom-0 left-0 w-full h-[50%] pointer-events-none" style={{
-        background: "radial-gradient(ellipse at center bottom, rgba(255,107,74,0.25) 0%, rgba(245,166,35,0.2) 20%, rgba(139,111,71,0.15) 40%, transparent 70%)"
-      }} />
+      {/* <div
+        className="absolute bottom-0 left-0 w-full h-[50%] pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at center bottom, rgba(255,107,74,0.25) 0%, rgba(245,166,35,0.2) 20%, rgba(139,111,71,0.15) 40%, transparent 70%)",
+        }}
+      /> */}
 
       {/* Rainbow gradient arc at bottom */}
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.4 }}
       >
-        <svg 
-          className="w-full h-[200px] sm:h-[300px] md:h-[400px]" 
-          viewBox="0 0 1440 400" 
-          fill="none" 
+        <svg
+          className="w-full h-[200px] sm:h-[300px] md:h-[400px]"
+          viewBox="0 0 1440 400"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="none"
         >
           <defs>
-            <linearGradient id="rainbowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <linearGradient
+              id="rainbowGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
               <stop offset="0%" stopColor="#4169E1" />
               <stop offset="15%" stopColor="#00CED1" />
               <stop offset="30%" stopColor="#90EE90" />
@@ -112,15 +176,14 @@ export default function Hero() {
               <stop offset="100%" stopColor="#8A2BE2" />
             </linearGradient>
             <filter id="glow">
-              <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+              <feGaussianBlur stdDeviation="8" result="coloredBlur" />
               <feMerge>
-                <feMergeNode in="coloredBlur"/>
-                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
           </defs>
-          
-          {/* Arc path */}
+
           <path
             d="M 50 350 Q 720 50 1390 350"
             stroke="url(#rainbowGradient)"
@@ -130,7 +193,7 @@ export default function Hero() {
             opacity="0.9"
           />
         </svg>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }

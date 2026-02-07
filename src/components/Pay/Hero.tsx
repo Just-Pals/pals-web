@@ -109,7 +109,7 @@ export default function Hero() {
                 className=""
               />
             </div>
-            <div className="absolute bottom-[60px] left-1/7 lg:block hidden">
+            <div className="absolute bottom-[60px] left-1/6 lg:block hidden">
               <Image
                 src="/home/card-left.svg"
                 alt="Phone Line"

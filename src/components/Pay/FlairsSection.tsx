@@ -52,7 +52,7 @@ export default function FlairsSection() {
             BEHOLD
           </p>
           <h1 className="text-[48px] sm:text-[64px] md:text-[100px] lg:text-[140px] xl:text-[180px] font-serif italic leading-none text-[#4169E1]">
-            flairs
+            Drops
           </h1>
         </motion.div>
 

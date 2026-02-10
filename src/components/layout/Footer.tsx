@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Container from "../common/Container";
+import Image from "next/image";
 
 interface FooterProps {
   variant?: "default" | "pay";
@@ -84,26 +85,18 @@ export default function Footer({ variant = "default", showMarquee = false }: Foo
               {/* Right Side - Logo */}
               <div className="flex flex-col items-start md:items-end">
                 <div className="flex flex-col items-center gap-2">
-                  {/* Shield Icon */}
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 border-2 border-white rounded-lg flex items-center justify-center">
-                    <svg
-                      width="24"
-                      height="28"
-                      viewBox="0 0 24 28"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-5 h-6 sm:w-6 sm:h-7 md:w-7 md:h-8"
-                    >
-                      <path
-                        d="M12 0L0 4.8V12C0 19.2 5.04 25.92 12 28C18.96 25.92 24 19.2 24 12V4.8L12 0Z"
-                        fill="white"
-                      />
-                      <path
-                        d="M12 3L3 6.4V12C3 17.52 6.72 22.56 12 24.4C17.28 22.56 21 17.52 21 12V6.4L12 3Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
+                  {/* Logo */}
+<div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
+  <Image
+    src="/backgrounds/black-background.png"
+    alt="PALS Logo"
+    fill
+    className="object-contain"
+    priority
+  />
+</div>
+
+                 
                   {/* PALS Text */}
                   <span className="text-white font-bold text-sm sm:text-base md:text-lg tracking-wider">PALS</span>
                 </div>

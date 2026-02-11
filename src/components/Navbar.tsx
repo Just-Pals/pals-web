@@ -89,8 +89,7 @@ export default function Navbar() {
                xs:w-11 xs:h-11
                sm:w-12 sm:h-12
                md:w-14 md:h-14
-               lg:w-[65px] lg:h-[65px]
-                                                  "
+               lg:w-[65px] lg:h-[65px]"
               />
             </motion.div>
             <motion.span
@@ -104,27 +103,18 @@ export default function Navbar() {
               whitespace-nowrap 
               truncate
                       "
-              initial={{ opacity: 0, x: -10, color: "#ffffff" }}
+              initial={false}
               animate={{
-                opacity: 1,
-                x: 0,
-                color: [
-                  "#ffffff",
-                  "#cfff00",
-                  "#4169e1",
-                  "#ed683fff",
-                  "#2be68fff",
-                ],
+                color: ["#FFFFFF", "#CE1126", "#007A3D","#FFFFFF", "#CE1126"],
               }}
               transition={{
-                delay: 0.3,
                 duration: 4,
                 repeat: Infinity,
-                repeatType: "loop",
+                repeatType: "mirror",
                 ease: "easeInOut",
               }}
             >
-              pals
+              Pals
             </motion.span>
           </Link>
         </motion.div>
@@ -295,10 +285,9 @@ export default function Navbar() {
                     whileHover={{ x: 5 }}
                     whileTap={{ scale: 0.98 }}
                     className={`cursor-pointer tracking-wide py-2.5 xs:py-3 sm:py-3.5 md:py-4 transition-all touch-manipulation
-                      ${
-                        activeMenu === item
-                          ? "text-white bg-white/10 rounded-lg px-3 xs:px-4"
-                          : "hover:text-white active:text-white/80"
+                      ${activeMenu === item
+                        ? "text-white bg-white/10 rounded-lg px-3 xs:px-4"
+                        : "hover:text-white active:text-white/80"
                       }`}
                   >
                     {item}

@@ -159,7 +159,7 @@ export default function FlairsSection() {
         </div>
 
         {/* FLAIR PACK POSTER */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -175,7 +175,7 @@ export default function FlairsSection() {
               className="rounded-xl sm:rounded-2xl shadow-2xl w-full h-auto"
             />
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* BOTTOM TEXT SECTION */}
         <div className="relative z-20">

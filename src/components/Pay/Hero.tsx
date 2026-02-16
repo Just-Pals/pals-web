@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen bg-black flex flex-col justify-center items-center text-center overflow-hidden pt-20 md:pt-28">
+    <section className="relative w-full sm:min-h-screen bg-black flex flex-col justify-center items-center text-center overflow-hidden pt-20 md:pt-28">
       {/* ================= DECOR ELEMENTS ================= */}
       <motion.div
         className="absolute top-[42%] left-[14%]"
@@ -78,7 +78,7 @@ export default function Hero() {
 
       {/* ================= MOBILE BOTTOM GRADIENT (BLEND INTO BLACK) ================= */}
       <div
-        className="absolute bottom-0 left-0 w-full pointer-events-none z-40 h-36 sm:h-48 md:h-64 lg:h-80"
+        className="absolute bottom-0 left-0 w-full pointer-events-none z-40 h-40 sm:h-48 md:h-64 lg:h-80"
         style={{
           background:
             "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 18%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 100%)",

@@ -16,25 +16,24 @@ interface FlairItem {
 
 export default function FlairsSection() {
   const flairs: FlairItem[] = [
-    { src: "/flairs/flair-1.png", x: -280, y: -80, delay: 0.2, mobileX: -100, mobileY: -30 },
-    { src: "/flairs/flair-2.png", x: 280, y: -80, delay: 0.4, mobileX: 100, mobileY: -30 },
-    { src: "/flairs/flair-3.png", x: -300, y: 200, delay: 0.6, mobileX: -110, mobileY: 80 },
-    { src: "/flairs/flair-4.png", x: 300, y: 200, delay: 0.8, mobileX: 110, mobileY: 80 },
-    { src: "/flairs/flair-5.png", x: 0, y: 390, delay: 1.0, mobileX: 0, mobileY: 150 },
+    { src: "/flairs/1.png", x: -180, y: -200, delay: 0.2, mobileX: -100, mobileY: -80 },
+    { src: "/flairs/2.png", x: 190, y: -140, delay: 0.4, mobileX: 100, mobileY: -60 },
+    { src: "/flairs/3.png", x: -190, y: 200, delay: 0.6, mobileX: -100, mobileY: 120 },
+    { src: "/flairs/4.png", x: 160, y: 270, delay: 0.8, mobileX: 90, mobileY: 140 },
   ];
     
   // padding=""
   return (
     <Section className="relative min-h-screen overflow-hidden"> 
       {/* PLANET BACKGROUND - positioned higher and larger */}
-      <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[1800px] h-[1800px] opacity-60 pointer-events-none z-0">
+      {/* <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[1800px] h-[1800px] opacity-60 pointer-events-none z-0">
         <Image
           src="/backgrounds/stellar-background.png"
           alt="planet background"
           fill
           className="object-contain"
         />
-      </div>
+      </div> */}
 
       {/* Dark vignette overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black pointer-events-none z-10" />
@@ -58,8 +57,7 @@ export default function FlairsSection() {
 
         {/* PHONE WITH FLAIRS */}
         <div className="relative z-20 flex justify-center items-center mb-20 sm:mb-28 md:mb-40">
-          {/* Orange glow circle behind phone */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
@@ -69,7 +67,7 @@ export default function FlairsSection() {
               background: "radial-gradient(circle, rgba(255,140,0,0.4) 0%, rgba(255,100,0,0.2) 40%, transparent 70%)",
               filter: "blur(60px)"
             }}
-          />
+          /> */}
 
           {/* Phone mockup */}
           <motion.div
@@ -77,40 +75,47 @@ export default function FlairsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="relative w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] h-[480px] sm:h-[560px] md:h-[640px] lg:h-[720px]"
+            className="relative"
           >
+            <Image
+              src="/flairs/mocup.png"
+              alt="Phone mockup"
+              width={727}
+              height={857}
+              className=""
+            />
+      
             {/* Phone frame with golden border */}
-            <div className="absolute inset-0 rounded-[50px] border-[3px] border-[#D4AF37] overflow-hidden bg-black">
+            {/* <div className="absolute inset-0 rounded-[50px] border-[3px] border-[#D4AF37] overflow-hidden bg-black"> */}
               {/* Phone screen content - scanner UI */}
-              <div className="w-full h-full flex flex-col items-center justify-center relative">
+              {/* <div className="w-full h-full flex flex-col items-center justify-center relative"> */}
                 {/* Orange circle/sun at top */}
-                <div className="absolute top-[15%] w-32 h-32 rounded-full bg-gradient-to-b from-[#FFD700] to-[#FF6B35]" />
+                {/* <div className="absolute top-[15%] w-32 h-32 rounded-full bg-gradient-to-b from-[#FFD700] to-[#FF6B35]" /> */}
                 
                 {/* Scanner box outline */}
-                <div className="w-[60%] h-[45%] border-2 border-white/30 rounded-lg relative">
-                  {/* Corner markers */}
+                {/* <div className="w-[60%] h-[45%] border-2 border-white/30 rounded-lg relative">
                   <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-[#FFD700]" />
                   <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-[#FFD700]" />
                   <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-[#FFD700]" />
                   <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-[#FFD700]" />
-                </div>
+                </div> */}
 
                 {/* Bottom flair selector circles */}
-                <div className="absolute bottom-[15%] flex gap-6">
+                {/* <div className="absolute bottom-[15%] flex gap-6">
                   <div className="w-16 h-16 rounded-full border-2 border-white/50 bg-black/50" />
                   <div className="w-20 h-20 rounded-full border-2 border-[#00FF88] bg-gradient-to-b from-[#FFD700] to-[#FF6B35] flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[#FFD700] to-[#FF6B35]" />
                   </div>
                   <div className="w-16 h-16 rounded-full border-2 border-white/50 bg-black/50" />
-                </div>
+                </div> */}
 
                 {/* STELLAR text and subtitle */}
-                <div className="absolute bottom-[6%] text-center">
+                {/* <div className="absolute bottom-[6%] text-center">
                   <p className="text-white text-xl font-bold tracking-[0.3em]">STELLAR</p>
                   <p className="text-[#00FF88] text-xs tracking-wider mt-1">TAP TO CHANGE ENVIRONMENT</p>
-                </div>
-              </div>
-            </div>
+                </div> */}
+              {/* </div> */}
+            {/* </div> */}
           </motion.div>
 
           {/* FLOATING FLAIRS around phone */}
@@ -135,9 +140,9 @@ export default function FlairsSection() {
                 <Image
                   src={flair.src}
                   alt={`flair ${i + 1}`}
-                  width={140}
-                  height={140}
-                  className="object-contain w-[50px] xs:w-[60px]"
+                  width={120}
+                  height={120}
+                  className="object-contain"
                 />
               </div>
               <div 
@@ -149,9 +154,9 @@ export default function FlairsSection() {
                 <Image
                   src={flair.src}
                   alt={`flair ${i + 1}`}
-                  width={140}
-                  height={140}
-                  className="object-contain w-[80px] md:w-[100px] lg:w-[120px] xl:w-[140px]"
+                  width={200}
+                  height={200}
+                  className="object-contain"
                 />
               </div>
             </motion.div>
@@ -159,7 +164,7 @@ export default function FlairsSection() {
         </div>
 
         {/* FLAIR PACK POSTER */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -175,7 +180,7 @@ export default function FlairsSection() {
               className="rounded-xl sm:rounded-2xl shadow-2xl w-full h-auto"
             />
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* BOTTOM TEXT SECTION */}
         <div className="relative z-20">

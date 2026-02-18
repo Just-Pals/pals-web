@@ -17,13 +17,13 @@ const perks: PerkItem[] = [
     title: "Purchase",
     tagline: "scan and pay <br/> instantly.",
     desc: "Make payments securely using Pals. Enjoy fast checkouts and exclusive rewards every time you scan and pay.",
-    img: "/perks/language.png",
+    img: "/perks/scanandpay.png",
   },
   {
     title: "Loan",
     tagline: "borrow from pals <br/> and pools.",
     desc: "Access flexible borrowing options directly from your Pals Circle or community pools without paperwork.",
-    img: "/perks/loan.png",
+    img: "/perks/borrow.png",
   },
   {
     title: "Charity",

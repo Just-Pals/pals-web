@@ -62,7 +62,7 @@ export default function SafetyNetSection() {
             transition={{ duration: 0.8 }}
           >
             <Image
-              src="/pay/zero interest.png"
+              src="/pay/zero-interest.png"
               alt="Zero interest"
               width={320}
               height={320}

@@ -94,24 +94,22 @@ export default function Navbar() {
             </motion.div>
             <motion.span
               className="
-              text-lg 
-              xs:text-xl 
-              sm:text-2xl 
-              md:text-3xl 
-              lg:text-4xl
-              font-semibold 
-              whitespace-nowrap 
-              truncate
-                      "
-              initial={false}
+    text-lg
+    xs:text-xl
+    sm:text-2xl
+    md:text-3xl
+    lg:text-4xl
+    font-semibold
+    whitespace-nowrap
+  "
               animate={{
-                color: ["#FFFFFF", "#CE1126", "#007A3D","#FFFFFF", "#CE1126"],
+                color: ["#FFFFFF", "#CE1126", "#007A3D"],
               }}
               transition={{
-                duration: 4,
+                duration: 6,
+                times: [0, 0.33, 0.66],
                 repeat: Infinity,
-                repeatType: "mirror",
-                ease: "easeInOut",
+                ease: "linear",
               }}
             >
               Pals
@@ -285,9 +283,10 @@ export default function Navbar() {
                     whileHover={{ x: 5 }}
                     whileTap={{ scale: 0.98 }}
                     className={`cursor-pointer tracking-wide py-2.5 xs:py-3 sm:py-3.5 md:py-4 transition-all touch-manipulation
-                      ${activeMenu === item
-                        ? "text-white bg-white/10 rounded-lg px-3 xs:px-4"
-                        : "hover:text-white active:text-white/80"
+                      ${
+                        activeMenu === item
+                          ? "text-white bg-white/10 rounded-lg px-3 xs:px-4"
+                          : "hover:text-white active:text-white/80"
                       }`}
                   >
                     {item}

@@ -51,7 +51,7 @@ export default async function BlogDetails({ params }: { params: Promise<{ id: st
         <Footer />
       </main>
     );
-  }
+  } 
 
   // Format content - handle newlines and paragraphs
   const formattedContent = blog.content.split('\n\n').filter(para => para.trim().length > 0);

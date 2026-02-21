@@ -2,8 +2,48 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import {
+  Playfair_Display,
+  Cinzel,
+  Montserrat,
+  Poppins,
+  Oswald,
+  Kaushan_Script,
+  Pacifico,
+  Dancing_Script,
+} from "next/font/google";
+
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["700"] }); // Fashion serif
+const cinzel = Cinzel({ subsets: ["latin"], weight: ["700"] });             // Roman serif
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["900"] });     // Bold geometric
+const poppins = Poppins({ subsets: ["latin"], weight: ["700"] });           // Modern clean
+const oswald = Oswald({ subsets: ["latin"], weight: ["700"] });             // Condensed bold
+const kaushan = Kaushan_Script({ subsets: ["latin"], weight: ["400"] });    // Brush
+const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });         // Smooth script
+const dancing = Dancing_Script({ subsets: ["latin"], weight: ["700"] });    // Decorative script
+
+const palsStyles = [
+  { font: playfair.className, color: "#FF0000" },   // Red serif
+  { font: cinzel.className, color: "#007A3D" },     // Green classic
+  { font: montserrat.className, color: "#FFFFFF" }, // White bold
+  { font: poppins.className, color: "#c5df1f" },    // Green modern
+  { font: oswald.className, color: "#003cff" },     // Red condensed
+  { font: kaushan.className, color: "#e76903" },    // White brush
+  { font: pacifico.className, color: "#f11d3d" },   // Green smooth script
+  { font: dancing.className, color: "#ff00d4" },    // Red decorative
+];
 
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setIndex((prev) => (prev + 1) % palsStyles.length);
+  }, 2000); // 2 sec per font
+
+  return () => clearInterval(interval);
+}, []);
   return (
     <section className="relative w-full sm:min-h-screen bg-black flex flex-col justify-center items-center text-center overflow-hidden pt-20 md:pt-28">
       {/* ================= DECOR ELEMENTS ================= */}
@@ -36,14 +76,15 @@ export default function Hero() {
 
       {/* ================= TEXT ================= */}
       <div className="relative z-20 flex flex-col items-center">
-        <motion.h1
-          className="text-[42px] sm:text-[60px] md:text-[90px] lg:text-[130px] xl:text-[180px] font-black leading-none tracking-tight text-[#CFFF00]"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          PALS
-        </motion.h1>
+       <motion.h1
+  key={index}
+  className={`text-[42px] sm:text-[60px] md:text-[90px] lg:text-[130px] xl:text-[180px] leading-none tracking-tight transition-all duration-500 ${palsStyles[index].font}`}
+  style={{ color: palsStyles[index].color }}
+  animate={{ y: [0, -8, 0] }}
+  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+>
+  PALS
+</motion.h1>
 
         <motion.div
           className="w-full max-w-5xl h-[2px] my-6"

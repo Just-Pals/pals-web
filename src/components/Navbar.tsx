@@ -13,8 +13,9 @@ export default function Navbar() {
 
   const menuData: Record<string, any[]> = {
     "About Us": [
-      { icon: "🎯", label: "Mission" },
-      { icon: "👥", label: "Team" },
+      { icon: "🎯", label: "Mission", link: "/mission"},
+      { icon: "👥", label: "Team", link: "/team" },
+       { icon: "📝", label: "Blog", link: "/blog" }
     ],
 
     Offerings: [
@@ -39,13 +40,13 @@ export default function Navbar() {
       { icon: "💍", label: "Marriage" },
     ],
 
-    Settings: [
-      { icon: "📝", label: "Blog", link: "/blog" },
-      { icon: "💰", label: "Club", link: "/club" },
-      { icon: "⭐", label: "Pal Score", link: "/pal-score" },
-      { icon: "👨‍👩‍👧‍👦", label: "Team", link: "/team" },
-      { icon: "✍️", label: "Register", link: "/register" },
-    ],
+    // Settings: [
+    //   { icon: "📝", label: "Blog", link: "/blog" },
+    //   { icon: "💰", label: "Club", link: "/mission" },
+    //   { icon: "⭐", label: "Pal Score", link: "/pal-score" },
+    //   { icon: "👨‍👩‍👧‍👦", label: "Team", link: "/team" },
+    //   { icon: "✍️", label: "Register", link: "/register" },
+    // ],
   };
 
   const menuItems = Object.keys(menuData);
@@ -80,19 +81,20 @@ export default function Navbar() {
             >
               <Image
                 src="/common/logo.png"
-                width={60}
-                height={60}
+                width={100}
+                height={100}
                 alt="pals home"
                 priority
                 className="
-               w-10 h-10
-               xs:w-11 xs:h-11
-               sm:w-12 sm:h-12
-               md:w-14 md:h-14
-               lg:w-[65px] lg:h-[65px]"
+  w-14 h-14
+  xs:w-16 xs:h-16
+  sm:w-18 sm:h-18
+  md:w-20 md:h-20
+  lg:w-[90px] lg:h-[90px]
+"
               />
             </motion.div>
-            <motion.span
+            {/* <motion.span
               className="
     text-lg
     xs:text-xl
@@ -113,7 +115,7 @@ export default function Navbar() {
               }}
             >
               Pals
-            </motion.span>
+            </motion.span> */}
           </Link>
         </motion.div>
 

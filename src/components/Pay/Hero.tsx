@@ -37,13 +37,26 @@ export default function Hero() {
       {/* ================= TEXT ================= */}
       <div className="relative z-20 flex flex-col items-center">
         <motion.h1
-          className="text-[42px] sm:text-[60px] md:text-[90px] lg:text-[130px] xl:text-[180px] font-black leading-none tracking-tight text-[#CFFF00]"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          PALS
-        </motion.h1>
+  className="text-[42px] sm:text-[60px] md:text-[90px] lg:text-[130px] xl:text-[180px] font-black leading-none tracking-tight"
+  animate={{
+    color: ["#CFFF00", "#FFFFFF", "#CE1126", "#007A3D", "#CFFF00"],
+    y: [0, -10, 0],   // movement
+  }}
+  transition={{
+    color: {
+      duration: 6,
+      repeat: Infinity,
+      ease: "linear",
+    },
+    y: {
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  }}
+>
+  PALS
+</motion.h1>
 
         <motion.div
           className="w-full max-w-5xl h-[2px] my-6"

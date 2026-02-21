@@ -12,7 +12,7 @@ export default async function BlogDetails({ params }: { params: Promise<{ id: st
         <h1 className="text-3xl font-semibold">Blog not found</h1>
       </div>
     );
-  }
+  } 
 
   return (
     <div className="bg-white text-black min-h-screen">

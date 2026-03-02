@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { ShoppingCart, CreditCard, HandCoins, TrendingUp, Landmark, Circle, AlertTriangle, Medal, Wallet, Rocket, Heart, Gem, Target, Users, FileText } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,40 +14,32 @@ export default function Navbar() {
 
   const menuData: Record<string, any[]> = {
     "About Us": [
-      { icon: "🎯", label: "Mission", link: "/mission"},
-      { icon: "👥", label: "Team", link: "/team" },
-       { icon: "📝", label: "Blog", link: "/blog" }
+      { icon: Target, label: "Mission", link: "/mission" },
+      { icon: Users, label: "Team", link: "/team" },
+      { icon: FileText, label: "Blog", link: "/blog" },
     ],
 
     Offerings: [
-      { icon: "🛒", label: "Purchase" },
-      { icon: "💳", label: "Loan" },
-      { icon: "🤲", label: "Charity" },
-      { icon: "📈", label: "Invest" },
-      { icon: "🏛️", label: "Waqf" },
+      { icon: ShoppingCart, label: "Purchase" },
+      { icon: CreditCard, label: "Loan" },
+      { icon: HandCoins, label: "Charity" },
+      { icon: TrendingUp, label: "Invest" },
+      { icon: Landmark, label: "Waqf" },
     ],
 
     Features: [
-      { icon: "🌀", label: "Pool" },
-      { icon: "🚨", label: "Pal SOS" },
-      { icon: "🏅", label: "Gold Vault" },
-      { icon: "👛", label: "Wallet" },
-      { icon: "🚀", label: "Space" },
+      { icon: Circle, label: "Pool" },
+      { icon: AlertTriangle, label: "Pal SOS" },
+      { icon: Medal, label: "Gold Vault" },
+      { icon: Wallet, label: "Wallet" },
+      { icon: Rocket, label: "Space" },
     ],
 
     "Curated Pools": [
-      { icon: "❤️", label: "Health" },
-      { icon: "🕋", label: "Umrah" },
-      { icon: "💍", label: "Marriage" },
+      { icon: Heart, label: "Health" },
+      { icon: Landmark, label: "Umrah" },
+      { icon: Gem, label: "Marriage" },
     ],
-
-    // Settings: [
-    //   { icon: "📝", label: "Blog", link: "/blog" },
-    //   { icon: "💰", label: "Club", link: "/mission" },
-    //   { icon: "⭐", label: "Pal Score", link: "/pal-score" },
-    //   { icon: "👨‍👩‍👧‍👦", label: "Team", link: "/team" },
-    //   { icon: "✍️", label: "Register", link: "/register" },
-    // ],
   };
 
   const menuItems = Object.keys(menuData);
@@ -94,28 +87,6 @@ export default function Navbar() {
 "
               />
             </motion.div>
-            {/* <motion.span
-              className="
-    text-lg
-    xs:text-xl
-    sm:text-2xl
-    md:text-3xl
-    lg:text-4xl
-    font-semibold
-    whitespace-nowrap
-  "
-              animate={{
-                color: ["#FFFFFF", "#CE1126", "#007A3D"],
-              }}
-              transition={{
-                duration: 6,
-                times: [0, 0.33, 0.66],
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            >
-              Pals
-            </motion.span> */}
           </Link>
         </motion.div>
 
@@ -285,10 +256,9 @@ export default function Navbar() {
                     whileHover={{ x: 5 }}
                     whileTap={{ scale: 0.98 }}
                     className={`cursor-pointer tracking-wide py-2.5 xs:py-3 sm:py-3.5 md:py-4 transition-all touch-manipulation
-                      ${
-                        activeMenu === item
-                          ? "text-white bg-white/10 rounded-lg px-3 xs:px-4"
-                          : "hover:text-white active:text-white/80"
+                      ${activeMenu === item
+                        ? "text-white bg-white/10 rounded-lg px-3 xs:px-4"
+                        : "hover:text-white active:text-white/80"
                       }`}
                   >
                     {item}
@@ -306,7 +276,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.3 }}
-                    className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 xs:gap-5 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-10"
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8"
                   >
                     {menuData[activeMenu].map((item, i) => (
                       <motion.div
@@ -319,16 +289,10 @@ export default function Navbar() {
                         transition={{ delay: i * 0.05 }}
                         whileHover={{ scale: 1.05, y: -5 }}
                         whileTap={{ scale: 0.98 }}
-                        className="flex flex-col items-center text-center cursor-pointer touch-manipulation p-2 xs:p-3 sm:p-4"
+                        className="flex items-center gap-3 cursor-pointer px-4 py-3 hover:bg-white/5 rounded-xl transition-all group"
                       >
                         {item.icon && (
-                          <motion.span
-                            className="text-3xl xs:text-4xl sm:text-5xl mb-1.5 xs:mb-2 sm:mb-2.5"
-                            whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-                            transition={{ duration: 0.5 }}
-                          >
-                            {item.icon}
-                          </motion.span>
+                          <item.icon className="w-5 h-5 text-white/60 group-hover:text-white transition-colors" />
                         )}
                         {item.img && (
                           <Image
@@ -339,7 +303,7 @@ export default function Navbar() {
                             className="rounded-xl w-full h-auto max-w-[150px] xs:max-w-[180px] sm:max-w-[200px]"
                           />
                         )}
-                        <span className="text-sm xs:text-base sm:text-lg md:text-xl tracking-wide mt-2 xs:mt-2.5 sm:mt-3 text-gray-300 hover:text-white active:text-white/80 transition-colors">
+                        <span className="text-sm sm:text-base md:text-lg tracking-[0.15em] uppercase text-white/60 group-hover:text-white transition-colors">
                           {item.label}
                         </span>
                       </motion.div>

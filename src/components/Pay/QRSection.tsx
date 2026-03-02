@@ -15,10 +15,9 @@ export default function QRSection() {
           transition={{ duration: 0.8 }}
           className="md:w-1/2"
         >
-          <h2 className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[90px] text-[#e6b157] font-serif italic leading-none">
-            {/* scan <br /> any QR */}
-            create <br/> your pool
-          </h2>
+         <h2 className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[90px] text-[#e6b157] font-serif italic font-extrabold leading-none">
+  create <br/> your pool
+</h2>
 
           <p className="text-white/70 mt-4 sm:mt-6 text-[14px] sm:text-[16px] md:text-lg max-w-md">
             {/* all codes are welcome. simply open pals and swipe left to scan. */}

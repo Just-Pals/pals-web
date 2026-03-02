@@ -24,14 +24,13 @@ const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });         // S
 const dancing = Dancing_Script({ subsets: ["latin"], weight: ["700"] });    // Decorative script
 
 const palsStyles = [
-  { font: playfair.className, color: "#FF0000" },   // Red serif
-  { font: cinzel.className, color: "#007A3D" },     // Green classic
-  { font: montserrat.className, color: "#FFFFFF" }, // White bold
-  { font: poppins.className, color: "#c5df1f" },    // Green modern
-  { font: oswald.className, color: "#003cff" },     // Red condensed
-  { font: kaushan.className, color: "#e76903" },    // White brush
-  { font: pacifico.className, color: "#f11d3d" },   // Green smooth script
-  { font: dancing.className, color: "#ff00d4" },    // Red decorative
+  { font: playfair.className, color: "#007A3D" },   // Red serif
+  { font: montserrat.className, color: "#FF0000" }, // White bold
+  { font: poppins.className, color: "#007A3D" },    // Green modern
+  { font: oswald.className, color: "#FF0000" },     // Red condensed
+  { font: kaushan.className, color: "#007A3D" },    // White brush
+  { font: pacifico.className, color: "#FF0000" },   // Green smooth script
+  { font: dancing.className, color: "#007A3D" },    // Red decorative
 ];
 
 export default function Hero() {
@@ -99,7 +98,7 @@ useEffect(() => {
         />
 
         <motion.h2
-          className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[100px] xl:text-[150px] font-serif italic leading-none text-[#CFFF00]"
+          className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[100px] xl:text-[150px] font-serif italic leading-none text-[#FFFFFF]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}

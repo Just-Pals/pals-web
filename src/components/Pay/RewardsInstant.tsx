@@ -14,9 +14,9 @@ export default function RewardsInstant() {
           transition={{ duration: 0.8 }}
           className="md:w-1/2"
         >
-          <h2 className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[90px] text-[#f04152] font-serif italic leading-none">
-            club <br /> your money
-          </h2>
+          <h2 className="text-[36px] sm:text-[48px] md:text-[70px] lg:text-[90px] text-[#f04152] font-serif italic font-bold leading-none">
+  club <br /> your money
+</h2>
 
           <p className="text-white/70 mt-4 sm:mt-6 text-[14px] sm:text-[16px] md:text-lg max-w-md">
             everyone contributes, and the pool grows.

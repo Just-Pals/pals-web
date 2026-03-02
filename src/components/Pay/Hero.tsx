@@ -24,13 +24,13 @@ const pacifico = Pacifico({ subsets: ["latin"], weight: ["400"] });         // S
 const dancing = Dancing_Script({ subsets: ["latin"], weight: ["700"] });    // Decorative script
 
 const palsStyles = [
-  // { font: playfair.className, color: "#00ffa3" },   // Red serif
-  { font: montserrat.className, color: "#CFFF00" }, // White bold
-  { font: poppins.className, color: "#00ffa3" },    // Green modern
-  { font: oswald.className, color: "#CFFF00" },     // Red condensed
-  { font: kaushan.className, color: "#23956b" },    // White brush
-  { font: cinzel.className, color: "#CFFF00" },   // Green smooth script
-  { font: dancing.className, color: "#00ffa3" },    // Red decorative
+  // { font: playfair.className, color: "#00ffa3" },   
+  { font: montserrat.className, color: "#CFFF00" }, 
+  { font: poppins.className, color: "#FF8A5B" },    
+  { font: oswald.className, color: "#CFFF00" },     
+  { font: kaushan.className, color: "#FF8A5B" },    
+  { font: cinzel.className, color: "#CFFF00" },   
+  { font: dancing.className, color: "#FF8A5B" },    
 ];
 
 export default function Hero() {

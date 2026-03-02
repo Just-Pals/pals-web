@@ -21,7 +21,7 @@ export default function Navbar() {
 
     Offerings: [
       { icon: ShoppingCart, label: "Purchase" },
-      { icon: CreditCard, label: "Loan" },
+      { icon: CreditCard, label: "Loan", link: "/lender" },
       { icon: HandCoins, label: "Charity" },
       { icon: TrendingUp, label: "Invest" },
       { icon: Landmark, label: "Waqf" },
@@ -255,8 +255,9 @@ export default function Navbar() {
                     transition={{ delay: 0.4 + index * 0.05 }}
                     whileHover={{ x: 5 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`cursor-pointer tracking-wide py-2.5 xs:py-3 sm:py-3.5 md:py-4 transition-all touch-manipulation
-                      ${activeMenu === item
+                   
+                   className={`cursor-pointer select-none tracking-wide py-2.5 xs:py-3 sm:py-3.5 md:py-4 transition-all touch-manipulation
+                     ${activeMenu === item
                         ? "text-white bg-white/10 rounded-lg px-3 xs:px-4"
                         : "hover:text-white active:text-white/80"
                       }`}

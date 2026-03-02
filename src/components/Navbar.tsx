@@ -14,8 +14,8 @@ export default function Navbar() {
 
   const menuData: Record<string, any[]> = {
     "About Us": [
-      { icon: Target, label: "Mission", link: "/mission" },
-      { icon: Users, label: "Team", link: "/team" },
+      { icon: Target, label: "Mission", link: "/team" },
+      { icon: Users, label: "Team", link: "/team#winners" },
       { icon: FileText, label: "Blog", link: "/blog" },
     ],
 

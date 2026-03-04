@@ -24,13 +24,13 @@ export default function Navbar() {
       { icon: CreditCard, label: "Loan", link: "/lender" },
       { icon: HandCoins, label: "Charity", link: "/charity" },
       { icon: TrendingUp, label: "Invest" },
-      { icon: Landmark, label: "Waqf", link: "/fund" },
+      { icon: Landmark, label: "Waqf" },
     ],
 
     Features: [
       { icon: Circle, label: "Pool" },
       { icon: AlertTriangle, label: "Pal SOS" },
-      { icon: Medal, label: "Gold Vault", link: "/monety" },
+      { icon: Medal, label: "Gold Vault", link: "/money" },
       { icon: Wallet, label: "Wallet", link: "/wallet" },
       { icon: Rocket, label: "Space" },
     ],

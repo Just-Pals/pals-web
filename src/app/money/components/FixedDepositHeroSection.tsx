@@ -13,7 +13,7 @@ export default function FixedDepositHeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/newsw.jpg"   // put this image in public
+          src="/newsG.png" 
           alt="Fixed Deposits"
           className="w-full h-full object-cover"
         />

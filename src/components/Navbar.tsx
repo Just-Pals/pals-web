@@ -22,16 +22,16 @@ export default function Navbar() {
     Offerings: [
       { icon: ShoppingCart, label: "Purchase" },
       { icon: CreditCard, label: "Loan", link: "/lender" },
-      { icon: HandCoins, label: "Charity" },
+      { icon: HandCoins, label: "Charity", link: "/charity" },
       { icon: TrendingUp, label: "Invest" },
-      { icon: Landmark, label: "Waqf" },
+      { icon: Landmark, label: "Waqf", link: "/fund" },
     ],
 
     Features: [
       { icon: Circle, label: "Pool" },
       { icon: AlertTriangle, label: "Pal SOS" },
-      { icon: Medal, label: "Gold Vault" },
-      { icon: Wallet, label: "Wallet" },
+      { icon: Medal, label: "Gold Vault", link: "/monety" },
+      { icon: Wallet, label: "Wallet", link: "/wallet" },
       { icon: Rocket, label: "Space" },
     ],
 

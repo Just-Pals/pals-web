@@ -36,7 +36,7 @@ export default function DiscoverSection() {
     donations="3.2K donations"
     title="Help Khimberly's Family After Deadly School Bullying"
     amount="$126,612 raised"
-    className="row-span-2"/>
+  />
 
   <FundCard
     img="/famil.jpg"

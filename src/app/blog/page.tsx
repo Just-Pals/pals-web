@@ -21,7 +21,7 @@ export default async function BlogPage() {
         title: blog.title,
         category: blog.tags && blog.tags.length > 0 ? blog.tags[0] : "article",
         date: formatBlogDate(blog.publishedAt),
-        image: getBlogImageUrl(blog.coverMediaId),
+        image: getBlogImageUrl(blog.coverMediaId, blog.coverImageUrl),
         summary: blog.summary,
         content: blog.content,
       }));
@@ -35,24 +35,24 @@ export default async function BlogPage() {
   }
 
   return (
-    <main className="bg-black min-h-screen text-white">
+    <main className="bg-white min-h-screen text-gray-900">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden border-b border-gray-100">
         <Container maxWidth="7xl" className="relative z-10">
           <BlogPageClient featured={featured} otherPosts={otherPosts} />
         </Container>
       </section>
 
       {/* Blog List Section */}
-      <section className="py-8 sm:py-12 md:py-16 bg-black">
+      <section className="py-8 sm:py-12 md:py-16 bg-white">
         <Container maxWidth="7xl">
           {otherPosts.length > 0 ? (
             <BlogList posts={otherPosts} />
           ) : (
             <div className="py-16 text-center">
-              <p className="text-lg text-gray-400">No articles available at the moment.</p>
+              <p className="text-lg text-gray-500">No articles available at the moment.</p>
             </div>
           )}
         </Container>

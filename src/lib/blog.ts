@@ -5,6 +5,8 @@ export interface BlogPost {
   summary: string;
   content: string;
   coverMediaId: string | null;
+  /** Resolved cover image URL from API (when backend enriches response) */
+  coverImageUrl?: string | null;
   authorId: string;
   status: string;
   tags: string[];
@@ -41,6 +43,12 @@ export interface BlogResponse {
   };
 }
 
+/** Use same backend as admin in local dev when unset; set NEXT_PUBLIC_API_URL in production (e.g. https://api.pals.money) */
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://api.pals.money";
+
+/** Revalidate interval (seconds) so new/updated posts appear quickly on the site */
+const BLOG_REVALIDATE = 10;
+
 /**
  * Fetch blogs from the API
  */
@@ -51,9 +59,9 @@ export async function fetchBlogs(
 ): Promise<BlogResponse> {
   try {
     const response = await fetch(
-      `https://api.pals.money/api/blogs?page=${page}&perPage=${perPage}&status=${status}`,
+      `${API_BASE}/api/blogs?page=${page}&perPage=${perPage}&status=${status}`,
       {
-        next: { revalidate: 60 }, // Revalidate every 60 seconds
+        next: { revalidate: BLOG_REVALIDATE },
       }
     );
 
@@ -74,8 +82,8 @@ export async function fetchBlogs(
  */
 export async function fetchBlogById(id: string): Promise<BlogPost | null> {
   try {
-    const response = await fetch(`https://api.pals.money/api/blogs/${id}`, {
-      next: { revalidate: 60 },
+    const response = await fetch(`${API_BASE}/api/blogs/${id}`, {
+      next: { revalidate: BLOG_REVALIDATE },
     });
 
     if (!response.ok) {
@@ -98,8 +106,8 @@ export async function fetchBlogById(id: string): Promise<BlogPost | null> {
  */
 export async function fetchBlogBySlug(slug: string): Promise<BlogPost | null> {
   try {
-    const response = await fetch(`https://api.pals.money/api/blogs/slug/${slug}`, {
-      next: { revalidate: 60 },
+    const response = await fetch(`${API_BASE}/api/blogs/slug/${slug}`, {
+      next: { revalidate: BLOG_REVALIDATE },
     });
 
     if (!response.ok) {
@@ -130,15 +138,11 @@ export function formatBlogDate(dateString: string): string {
 }
 
 /**
- * Get placeholder image URL for blogs without cover images
+ * Get cover image URL for a blog. Prefer coverImageUrl from API; otherwise use public media redirect or placeholder.
  */
-export function getBlogImageUrl(coverMediaId: string | null): string {
-  if (coverMediaId) {
-    // If you have a media endpoint, construct the URL here
-    // Example: return `https://api.pals.money/api/media/${coverMediaId}`;
-    return `/blog/blog1.png`; // Placeholder until media endpoint is available
-  }
-  // Default placeholder image
+export function getBlogImageUrl(coverMediaId: string | null, coverImageUrl?: string | null): string {
+  if (coverImageUrl) return coverImageUrl;
+  if (coverMediaId) return `${API_BASE}/api/media/public/${coverMediaId}`;
   return "/blog/blog1.png";
 }
 

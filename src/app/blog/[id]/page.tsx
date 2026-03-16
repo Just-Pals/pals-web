@@ -32,16 +32,16 @@ export default async function BlogDetails({ params }: { params: Promise<{ id: st
 
   if (!blog) {
     return (
-      <main className="bg-black min-h-screen text-white">
+      <main className="bg-white min-h-screen text-gray-900">
         <Navbar />
         <div className="pt-24">
           <Container maxWidth="2xl">
             <div className="py-24 text-center">
-              <h1 className="text-3xl sm:text-4xl font-semibold mb-4 text-white">Blog not found</h1>
-              <p className="text-gray-400 mb-8">The article you're looking for doesn't exist or has been removed.</p>
+              <h1 className="text-3xl sm:text-4xl font-semibold mb-4 text-gray-900">Blog not found</h1>
+              <p className="text-gray-600 mb-8">The article you're looking for doesn't exist or has been removed.</p>
               <Link 
                 href="/blog" 
-                className="inline-block px-6 py-3 bg-white text-black rounded-full hover:bg-gray-200 transition-colors"
+                className="inline-block px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors"
               >
                 Back to Articles
               </Link>
@@ -58,7 +58,7 @@ export default async function BlogDetails({ params }: { params: Promise<{ id: st
   const category = blog.tags && blog.tags.length > 0 ? blog.tags[0] : "article";
 
   return (
-    <main className="bg-black min-h-screen text-white">
+    <main className="bg-white min-h-screen text-gray-900">
       <Navbar />
       <div className="pt-20 sm:pt-24 md:pt-28">
         <BlogDetailClient blog={blog} formattedContent={formattedContent} category={category} />

@@ -4,17 +4,17 @@ import Footer from "@/components/layout/Footer";
 import Container from "@/components/common/Container";
 import { fetchBlogs, formatBlogDate, getBlogImageUrl } from "@/lib/blog";
 import BlogPageClient from "@/components/BlogPage/BlogPageClient";
+import BlogCTA from "@/components/BlogPage/BlogCTA";
 
 export default async function BlogPage() {
   let featured = null;
   let otherPosts: any[] = [];
 
   try {
-    const response = await fetchBlogs(1, 10, "published");
+    const response = await fetchBlogs(1, 12, "published");
     const blogs = response.data.blogs;
 
     if (blogs.length > 0) {
-      // Map API blog to component format
       const mappedBlogs = blogs.map((blog) => ({
         id: blog.id,
         slug: blog.slug,
@@ -31,33 +31,27 @@ export default async function BlogPage() {
     }
   } catch (error) {
     console.error("Error fetching blogs:", error);
-    // Fallback to empty state
   }
 
   return (
     <main className="bg-white min-h-screen text-gray-900">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden border-b border-gray-100">
-        <Container maxWidth="7xl" className="relative z-10">
-          <BlogPageClient featured={featured} otherPosts={otherPosts} />
-        </Container>
-      </section>
+      <Container maxWidth="7xl">
+        <BlogPageClient featured={featured} otherPosts={otherPosts} />
 
-      {/* Blog List Section */}
-      <section className="py-8 sm:py-12 md:py-16 bg-white">
-        <Container maxWidth="7xl">
-          {otherPosts.length > 0 ? (
+        {otherPosts.length > 0 ? (
+          <div className="pb-16 sm:pb-20">
             <BlogList posts={otherPosts} />
-          ) : (
-            <div className="py-16 text-center">
-              <p className="text-lg text-gray-500">No articles available at the moment.</p>
-            </div>
-          )}
-        </Container>
-      </section>
+          </div>
+        ) : (
+          <div className="py-16 text-center">
+            <p className="text-base text-gray-400">No more articles yet — check back soon.</p>
+          </div>
+        )}
+      </Container>
 
+      <BlogCTA />
       <Footer />
     </main>
   );

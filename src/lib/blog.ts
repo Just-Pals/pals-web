@@ -46,11 +46,8 @@ export interface BlogResponse {
 /** Use same backend as admin in local dev when unset; set NEXT_PUBLIC_API_URL in production (e.g. https://api.pals.money) */
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://api.pals.money";
 
-/** Revalidate interval (seconds) so new/updated posts appear quickly on the site */
-const BLOG_REVALIDATE = 10;
-
 /**
- * Fetch blogs from the API
+ * Fetch blogs from the API — always fresh, no cache
  */
 export async function fetchBlogs(
   page: number = 1,
@@ -60,9 +57,7 @@ export async function fetchBlogs(
   try {
     const response = await fetch(
       `${API_BASE}/api/blogs?page=${page}&perPage=${perPage}&status=${status}`,
-      {
-        next: { revalidate: BLOG_REVALIDATE },
-      }
+      { cache: "no-store" }
     );
 
     if (!response.ok) {
@@ -82,9 +77,7 @@ export async function fetchBlogs(
  */
 export async function fetchBlogById(id: string): Promise<BlogPost | null> {
   try {
-    const response = await fetch(`${API_BASE}/api/blogs/${id}`, {
-      next: { revalidate: BLOG_REVALIDATE },
-    });
+    const response = await fetch(`${API_BASE}/api/blogs/${id}`, { cache: "no-store" });
 
     if (!response.ok) {
       if (response.status === 404) {
@@ -106,9 +99,7 @@ export async function fetchBlogById(id: string): Promise<BlogPost | null> {
  */
 export async function fetchBlogBySlug(slug: string): Promise<BlogPost | null> {
   try {
-    const response = await fetch(`${API_BASE}/api/blogs/slug/${slug}`, {
-      next: { revalidate: BLOG_REVALIDATE },
-    });
+    const response = await fetch(`${API_BASE}/api/blogs/slug/${slug}`, { cache: "no-store" });
 
     if (!response.ok) {
       if (response.status === 404) {

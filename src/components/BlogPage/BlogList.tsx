@@ -9,7 +9,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 export default function BlogList({ posts }: any) {
   const categories: string[] = useMemo(() => {
     const cats = posts.map((p: any) => p.category as string);
-    return ["All", ...Array.from(new Set(cats))];
+    return ["All", ...Array.from(new Set(cats))] as string[];
   }, [posts]);
 
   const [active, setActive] = useState("All");

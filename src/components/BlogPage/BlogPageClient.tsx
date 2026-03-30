@@ -1,94 +1,157 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const ease = [0.22, 1, 0.36, 1] as const;
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 28 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.65, delay, ease },
+});
 
 export default function BlogPageClient({ featured, otherPosts }: any) {
-  return (
-    <>
-      {/* Hero Content */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="mb-8 sm:mb-12"
-      >
-        <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-gray-900"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          Articles
-        </motion.h1>
-        <motion.p
-          className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          The journal of finance, rewards, credit performance and lifestyle
-          insights — curated for the trustworthy.
-        </motion.p>
-      </motion.div>
+  const [apiStatus, setApiStatus] = useState<"loading" | "ok" | "err">("loading");
 
-      {/* Featured Blog */}
-      {featured && (
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+  // ── Client-side fetch so the API call is visible in browser Network tab ──
+  useEffect(() => {
+    fetch("https://api.pals.money/api/blogs?page=1&perPage=10&status=published", {
+      cache: "no-store",
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        console.groupCollapsed("[PALS] GET /api/blogs");
+        console.log("URL  :", "https://api.pals.money/api/blogs?page=1&perPage=10&status=published");
+        console.log("Data :", data);
+        console.groupEnd();
+        setApiStatus("ok");
+      })
+      .catch((err) => {
+        console.warn("[PALS] /api/blogs error:", err);
+        setApiStatus("err");
+      });
+  }, []);
+
+  return (
+    <div className="pt-32 lg:pt-40 pb-8">
+      {/* ── Dev API badge ── */}
+      <AnimatePresence>
+        {process.env.NODE_ENV === "development" && apiStatus !== "loading" && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="fixed bottom-5 left-5 z-50 flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] font-mono bg-gray-900 text-white shadow-lg"
+          >
+            <span
+              className={`w-1.5 h-1.5 rounded-full ${
+                apiStatus === "ok" ? "bg-teal-400" : "bg-red-400"
+              }`}
+            />
+            api.pals.money/api/blogs — {apiStatus === "ok" ? "200 OK" : "error"}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ── Page heading ── */}
+      <div className="overflow-hidden mb-10 sm:mb-14">
+        <motion.span
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.5, ease }}
+          className="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-teal-600 mb-3"
         >
+          Journal
+        </motion.span>
+
+        <div className="overflow-hidden">
+          <motion.h1
+            initial={{ y: "110%" }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.75, delay: 0.05, ease }}
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-[96px] font-black tracking-tight text-gray-900 leading-none"
+          >
+            Articles
+          </motion.h1>
+        </div>
+
+        <motion.p {...fadeUp(0.25)} className="mt-4 text-base sm:text-lg text-gray-500 max-w-xl leading-relaxed">
+          Finance, rewards, credit &amp; lifestyle insights — curated for the trustworthy.
+        </motion.p>
+      </div>
+
+      {/* ── Featured post ── */}
+      {featured && (
+        <motion.div {...fadeUp(0.35)}>
           <Link href={`/blog/${featured.slug}`} className="block group">
             <motion.div
-              className="bg-white rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl border border-gray-200 overflow-hidden transition-all duration-300"
-              whileHover={{ y: -4 }}
-              transition={{ duration: 0.2 }}
+              className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white shadow-sm"
+              whileHover={{ boxShadow: "0 24px 60px -10px rgba(0,0,0,0.12)" }}
+              transition={{ duration: 0.4 }}
             >
-              <div className="flex flex-col md:flex-row w-full">
-                <div className="relative w-full md:w-[40%] h-[200px] sm:h-[240px] md:h-[300px] lg:h-[360px] overflow-hidden bg-gray-100">
+              <div className="flex flex-col lg:flex-row">
+                {/* Image side */}
+                <div className="relative w-full lg:w-[56%] h-[240px] sm:h-[320px] lg:h-[440px] overflow-hidden bg-gray-100 shrink-0">
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.4 }}
                     className="w-full h-full"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.7, ease }}
                   >
                     <Image
                       src={featured.image}
                       fill
                       alt={featured.title}
                       className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 40vw"
+                      sizes="(max-width: 1024px) 100vw, 56vw"
+                      priority
+                      unoptimized
                     />
                   </motion.div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  {/* Featured pill */}
+                  <motion.div
+                    className="absolute top-4 left-4"
+                    initial={{ opacity: 0, scale: 0.85 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.55, duration: 0.4 }}
+                  >
+                    <span className="bg-white/90 backdrop-blur-sm text-gray-800 text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full shadow">
+                      ✦ Featured
+                    </span>
+                  </motion.div>
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
-                <div className="p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-between w-full md:w-[60%] bg-white">
+                {/* Content side */}
+                <div className="flex flex-col justify-between p-7 sm:p-10 lg:p-12 xl:p-14 flex-1">
                   <div>
-                    <motion.span
-                      className="inline-block uppercase text-[10px] sm:text-xs text-gray-500 tracking-wider font-medium mb-3 px-3 py-1 bg-gray-100 rounded-full"
-                      whileHover={{ scale: 1.05 }}
-                    >
+                    <span className="inline-block text-[10px] font-bold tracking-[0.22em] uppercase text-teal-600 mb-4 px-3 py-1 bg-teal-50 rounded-full">
                       {featured.category}
-                    </motion.span>
-                    <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-3 sm:mt-4 text-gray-900 group-hover:text-gray-700 transition-colors">
+                    </span>
+
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-black text-gray-900 leading-tight mt-3 group-hover:text-gray-700 transition-colors duration-300">
                       {featured.title}
                     </h2>
+
                     {featured.summary && (
-                      <p className="text-sm sm:text-base text-gray-600 mt-3 sm:mt-4 line-clamp-3">
+                      <p className="text-gray-500 text-sm sm:text-base mt-4 leading-relaxed line-clamp-3">
                         {featured.summary}
                       </p>
                     )}
                   </div>
 
-                  <div className="flex items-center justify-between mt-6">
-                    <p className="text-xs sm:text-sm text-gray-500">{featured.date}</p>
+                  <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-100">
+                    <span className="text-xs text-gray-400">{featured.date}</span>
                     <motion.span
-                      className="text-gray-400 group-hover:text-gray-900 transition-colors text-xl"
+                      className="flex items-center gap-1.5 text-sm font-bold text-gray-400 group-hover:text-gray-900 transition-colors duration-300"
                       whileHover={{ x: 4 }}
+                      transition={{ duration: 0.2 }}
                     >
-                      →
+                      Read article <span>→</span>
                     </motion.span>
                   </div>
                 </div>
@@ -97,7 +160,6 @@ export default function BlogPageClient({ featured, otherPosts }: any) {
           </Link>
         </motion.div>
       )}
-    </>
+    </div>
   );
 }
-

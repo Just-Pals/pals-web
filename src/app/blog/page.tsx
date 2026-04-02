@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import Container from "@/components/common/Container";
 import { fetchBlogs, formatBlogDate, getBlogImageUrl } from "@/lib/blog";
 import BlogPageClient from "@/components/BlogPage/BlogPageClient";
-import BlogCTA from "@/components/BlogPage/BlogCTA";
+// import BlogCTA from "@/components/BlogPage/BlogCTA";
 
 export default async function BlogPage() {
   let featured = null;
@@ -51,8 +51,8 @@ export default async function BlogPage() {
         )}
       </Container>
 
-      <BlogCTA />
-      <Footer />
+      {/* <BlogCTA /> */}
+      <Footer variant="pay" showMarquee />
     </main>
   );
 }

@@ -58,7 +58,7 @@ export default function BlogCard({ post, index }: any) {
               {post.category}
             </span>
 
-            <h3 className="text-base sm:text-[17px] font-bold leading-snug text-gray-900 group-hover:text-gray-600 transition-colors duration-300 line-clamp-2 flex-1">
+            <h3 className="text-base sm:text-[17px] font-bold leading-snug text-black group-hover:text-gray-600 transition-colors duration-300 line-clamp-2 flex-1">
               {post.title}
             </h3>
 

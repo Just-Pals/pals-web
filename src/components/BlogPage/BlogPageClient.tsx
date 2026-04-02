@@ -133,7 +133,7 @@ export default function BlogPageClient({ featured, otherPosts }: any) {
                       {featured.category}
                     </span>
 
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-black text-gray-900 leading-tight mt-3 group-hover:text-gray-700 transition-colors duration-300">
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-black text-black leading-tight mt-3 group-hover:text-gray-700 transition-colors duration-300">
                       {featured.title}
                     </h2>
 

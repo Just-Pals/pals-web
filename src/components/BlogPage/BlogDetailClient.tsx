@@ -99,7 +99,7 @@ export default function BlogDetailClient({ blog, formattedContent, category, rel
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.7, delay: 0.12, ease }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-black leading-tight text-gray-900"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-black leading-tight  text-black"
               >
                 {blog.title}
               </motion.h1>
@@ -264,7 +264,7 @@ export default function BlogDetailClient({ blog, formattedContent, category, rel
                           <span className="self-start text-[9px] font-black tracking-widest uppercase text-teal-600 mb-2 px-2 py-0.5 bg-teal-50 rounded-full">
                             {post.tags?.[0] || "article"}
                           </span>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 group-hover:text-gray-600 transition-colors line-clamp-2 flex-1">
+                          <h3 className="text-sm sm:text-base font-bold  text-black group-hover:text-gray-600 transition-colors line-clamp-2 flex-1">
                             {post.title}
                           </h3>
                           <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-50">

@@ -38,7 +38,7 @@ export default async function BlogDetails({ params }: { params: Promise<{ id: st
             </div>
           </Container>
         </div>
-        <Footer />
+      <Footer variant="pay" showMarquee />
       </main>
     );
   }
@@ -68,7 +68,7 @@ export default async function BlogDetails({ params }: { params: Promise<{ id: st
           relatedPosts={relatedPosts}
         />
       </div>
-      <Footer />
+     <Footer variant="pay" showMarquee />
     </main>
   );
 }

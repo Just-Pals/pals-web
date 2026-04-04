@@ -104,7 +104,7 @@ export default function Footer({
                   {/* Logo */}
                   <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
                     <Image
-                      src="/backgrounds/black-background.png"
+                      src="/common/logo.png"
                       alt="PALS Logo"
                       fill
                       className="object-contain"

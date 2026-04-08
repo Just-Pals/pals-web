@@ -287,7 +287,7 @@ export default function BlogDetailClient({ blog, formattedContent, category, rel
         )}
 
         {/* ── CTA ── */}
-        <motion.section
+        {/* <motion.section
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -350,7 +350,7 @@ export default function BlogDetailClient({ blog, formattedContent, category, rel
               </Link>
             </motion.div>
           </Container>
-        </motion.section>
+        </motion.section> */}
       </div>
 
       {/* ── Scroll to top ── */}

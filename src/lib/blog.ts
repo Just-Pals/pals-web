@@ -57,7 +57,7 @@ export async function fetchBlogs(
   try {
     const response = await fetch(
       `${API_BASE}/api/blogs?page=${page}&perPage=${perPage}&status=${status}`,
-      { cache: "no-store" }
+      { next: { revalidate: 60 } }
     );
 
     if (!response.ok) {
@@ -77,7 +77,7 @@ export async function fetchBlogs(
  */
 export async function fetchBlogById(id: string): Promise<BlogPost | null> {
   try {
-    const response = await fetch(`${API_BASE}/api/blogs/${id}`, { cache: "no-store" });
+    const response = await fetch(`${API_BASE}/api/blogs/${id}`, { next: { revalidate: 300 } });
 
     if (!response.ok) {
       if (response.status === 404) {
@@ -99,7 +99,7 @@ export async function fetchBlogById(id: string): Promise<BlogPost | null> {
  */
 export async function fetchBlogBySlug(slug: string): Promise<BlogPost | null> {
   try {
-    const response = await fetch(`${API_BASE}/api/blogs/slug/${slug}`, { cache: "no-store" });
+    const response = await fetch(`${API_BASE}/api/blogs/slug/${slug}`, { next: { revalidate: 300 } });
 
     if (!response.ok) {
       if (response.status === 404) {

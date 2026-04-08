@@ -4,13 +4,15 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { ShoppingCart, CreditCard, HandCoins, TrendingUp, Landmark, Circle, AlertTriangle, Medal, Wallet, Rocket, Heart, Gem, Target, Users, FileText } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState("About Us");
   const router = useRouter();
+  const pathname = usePathname();
+  const isBlogRoute = pathname === "/blog" || pathname.startsWith("/blog/");
 
   const menuData: Record<string, any[]> = {
     "About Us": [
@@ -113,11 +115,11 @@ export default function Navbar() {
 
           <motion.button
             onClick={() => setMenuOpen(true)}
-            className="border border-white/40 rounded-xl px-3 sm:px-4 md:px-6 py-2 md:py-3 flex items-center gap-2 sm:gap-4 md:gap-6 bg-black/20 backdrop-blur-md hover:bg-white/10 transition-all"
+            className={`border rounded-xl px-3 sm:px-4 md:px-6 py-2 md:py-3 flex items-center gap-2 sm:gap-4 md:gap-6 backdrop-blur-md transition-all ${isBlogRoute ? "border-black/40 bg-white/20 hover:bg-black/10" : "border-white/40 bg-black/20 hover:bg-white/10"}`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <span className="tracking-widest text-[10px] sm:text-xs text-white/70 hidden sm:inline">
+            <span className={`tracking-widest text-[10px] sm:text-xs hidden sm:inline ${isBlogRoute ? "text-black/70" : "text-white/70"}`}>
               {/* CRED INDUSIND BANK <br /> RUPAY CREDIT CARD */}
               Faith-Powered
             </span>
@@ -134,19 +136,19 @@ export default function Navbar() {
                   className="flex flex-col gap-[5px] xs:gap-[6px]"
                 >
                   <motion.span
-                    className="w-5 xs:w-6 h-[2px] bg-white"
+                    className={`w-5 xs:w-6 h-[2px] ${isBlogRoute ? "bg-black" : "bg-white"}`}
                     initial={{ width: 0 }}
                     animate={{ width: 20 }}
                     transition={{ delay: 0.1 }}
                   />
                   <motion.span
-                    className="w-5 xs:w-6 h-[2px] bg-white"
+                    className={`w-5 xs:w-6 h-[2px] ${isBlogRoute ? "bg-black" : "bg-white"}`}
                     initial={{ width: 0 }}
                     animate={{ width: 20 }}
                     transition={{ delay: 0.2 }}
                   />
                   <motion.span
-                    className="w-5 xs:w-6 h-[2px] bg-white"
+                    className={`w-5 xs:w-6 h-[2px] ${isBlogRoute ? "bg-black" : "bg-white"}`}
                     initial={{ width: 0 }}
                     animate={{ width: 20 }}
                     transition={{ delay: 0.3 }}

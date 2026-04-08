@@ -94,7 +94,7 @@ export default function Footer({
 
                 {/* Copyright */}
                 <p className="text-xs sm:text-sm text-white/50">
-                  © 2025 PALS, Inc.
+                  © 2026 PALS, Inc.
                 </p>
               </div>
 

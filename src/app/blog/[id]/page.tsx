@@ -12,6 +12,9 @@ function isUUID(str: string) {
 export default async function BlogDetails({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
+  // Start related posts fetch immediately in parallel with the blog fetch
+  const relatedPromise = fetchBlogs(1, 10, "published").catch(() => null);
+
   let blog = null;
   if (isUUID(id)) {
     blog = await fetchBlogById(id);
@@ -43,13 +46,15 @@ export default async function BlogDetails({ params }: { params: Promise<{ id: st
     );
   }
 
-  // Fetch related posts (other published blogs, excluding current)
+  // Await the related posts that were already in-flight
   let relatedPosts: any[] = [];
   try {
-    const res = await fetchBlogs(1, 10, "published");
-    relatedPosts = res.data.blogs
-      .filter((b) => b.id !== blog!.id)
-      .slice(0, 3);
+    const res = await relatedPromise;
+    if (res) {
+      relatedPosts = res.data.blogs
+        .filter((b) => b.id !== blog!.id)
+        .slice(0, 3);
+    }
   } catch {
     // silent — related posts are non-critical
   }
